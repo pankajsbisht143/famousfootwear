@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -82,15 +83,20 @@ after { clear: both; }
           font-size: 13px;
           font-variant-position: inherit;
         }
+        .nav{
+        margin-top: 5%;
+     }
     </style>
   </head>
   <body>
+    
+    <main>
     <div class="nav">
-      <a href="./index.html">Signup</a>
-      <a href="./signin.html">Signin</a>
+      <a href="./signupPage.html">Signup</a>
+      <a href="./SignIn.html">Signin</a>
     </div>
     <div id="signin">
-      <h1 id="heading">Please Enter Your Details</h1>
+      <h1 id="heading">Sign In</h1>
       <form>
         <label for="lemail">Email</label>
         <input type="email" id="email" />
@@ -99,35 +105,50 @@ after { clear: both; }
         <input type="submit" value="Submit" />
       </form>
     </div>
+</main>
   </body>
-  <script> //checking
- const form = document.querySelector('form');
-const heading = document.querySelector('#heading');
 
-form.addEventListener('submit', function(event) {
-	event.preventDefault();
+</html>
 
-	const email = document.querySelector('#email').value;
-	const password = document.querySelector('#password').value;
-
-	let accountData = JSON.parse(localStorage.getItem('account-data'));
-
-	if (accountData !== null) {
-		const matchingAccountData = accountData.find(account => account.email === email && account.password === password);
-
-		if (matchingAccountData) {
-			heading.textContent = 'Sign in Successful';
-      alert('Login successfully!');
-	} else {
-		heading.textContent = 'Wrong Credentials';
-    alert('Account Not successfully!');
-	}
-
-}
-
-});
-
-
-
-    </script>
+<script> //checking
+    const form = document.querySelector('form');
+   const heading = document.querySelector('#heading');
+   
+   form.addEventListener('submit', function(event) {
+       event.preventDefault();
+   
+       const email = document.querySelector('#email').value;
+       const password = document.querySelector('#password').value;
+   
+       let accountData = JSON.parse(localStorage.getItem('account-data'));
+   
+       if (accountData !== null) {
+           const matchingAccountData = accountData.find(account => account.email === email && account.password === password);
+   
+           if (matchingAccountData) {
+               heading.textContent = 'Sign in Successful';
+         alert('Login successfully!');
+       } else {
+           heading.textContent = 'Wrong Credentials';
+       alert('Wrong Credintials !');
+       }
+   
+   }
+   
+   });
+   
+   
+   
+       </script> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<body>
+    
+</body>
 </html>
