@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up Page</title>
+  <style>
+      /* Write all necessery css here  */
+      /* body {
+          background: white;
+          color: white;
+          font: 87.5%/1.5em 'Open Sans', sans-serif;
+          margin: 0;
+        } */
+#h1b{
+  margin: auto;
+  width: 100%;
+          height: 40px;
+          padding-left: 120px;
+}
+after { clear: both; }
+        #signup {
+          margin: 50px auto;
+          width: 320px;
+        }
+        #signup form {
+          margin: auto;
+          padding: 22px 22px 22px 22px;
+          width: 100%;
+          border-radius: 5px;
+          background:whitesmoke;
+         
+          box-shadow: #a9a9a9;
+        }
+        #signup form span {
+          background-color: white;
+          border-radius: 3px 0px 0px 3px;
+          border-right: 3px solid white;
+          color: #606468;
+          display: block;
+          float: left;
+          line-height: 50px;
+          text-align: center;
+          width: 50px;
+          height: 50px;
+        }
+        #signup form input[type="email"] {
+          background-color: white;
+          border-radius: 0px 3px 3px 0px;
+          color: #a9a9a9;
+          margin-bottom: 1em;
+          padding: 0 16px;
+          width: 90%;
+          height: 50px;
+        }
+        #signup form input[type="text"] {
+          background-color: white;
+          border-radius: 0px 3px 3px 0px;
+          color: #a9a9a9;
+          margin-bottom: 1em;
+          padding: 0 16px;
+          width: 90%;
+          height: 50px;
+        }
+        #signup form input[type="password"] {
+          background-color: white;
+          border-radius: 0px 3px 3px 0px;
+          color: #a9a9a9;
+          margin-bottom: 1em;
+          padding: 0 16px;
+          width: 90%;
+          height: 50px;
+        }
+        #signup form input[type="submit"] {
+          background: lightblue;
+          border: 0;
+          width: 100%;
+          height: 40px;
+          border-radius: 3px;
+          color: white;
+          cursor: pointer;
+          transition: background 0.3s ease-in-out;
+        }
+        #signup form input[type="submit"]:hover {
+          background: #16aa56;
+        }
+        #monop{
+          font-size: 13px;
+          font-variant-position: inherit;
+        }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <a href="./index.html">Signup</a>
+    <a href="./signin.html">Signin</a>
+  </div>
+  <div id="signup">
+    <h1 id="heading">Sign Up</h1>
+    <form>
+      <label for="lname">Name</label>
+      <input type="text" id="name" placeholder="Enter Full Name" required>
+      <label for="lemail">Email</label>
+      <input type="email" id="email" placeholder="Enter @gmail.com" required>
+      <label for="lpass">Password</label>
+      <input type="password"  id="password"  placeholder="Enter Password" required>
+      <label for="lpass">Confirm Password</label>
+      <input type="password"  id="confirmPassword"  placeholder="Enter confirm Password" required>
+      <p id="monop">By signing up, I accept the FamousFootwewar Terms of Service and acknowledge the Privacy Policy.</p>
+      <input type="submit" value="COUNTINUE" />
+      <ul class="helper-text">
+        <li class="length">Already have an account?
+          <a href="./signin.html">Sign In</a></li>
+    </form>
+  </div>
+</body>
+<script>
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function(event) {
+	event.preventDefault();
+
+	var name = document.querySelector('#name').value;
+	var email = document.querySelector('#email').value;
+	var password = document.querySelector('#password').value;
+    var confirmPassword = document.querySelector('#confirmPassword').value;
+
+	let accountData = JSON.parse(localStorage.getItem('account-data'));
+
+	if (accountData === null) {
+		accountData = [];
+	}
+
+	const newAccountData = {
+		name: name,
+		email: email,
+		password: password,
+        confirmPassword:confirmPassword
+	};
+
+	accountData.push(newAccountData);
+
+	localStorage.setItem('account-data', JSON.stringify(accountData));
+
+	alert('Account created successfully!');
+});
+
+
+ 
+</script>
+
+</html>
+
+
+
+
