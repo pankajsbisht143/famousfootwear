@@ -123,6 +123,7 @@ after{ clear: both; }
       <ul class="helper-text">
         <li class="length">Already have an account?
           <a href="./signin.html">Sign In</a></li>
+      </ul>
     </form>
   </div>
 </body>
@@ -135,7 +136,7 @@ form.addEventListener('submit', function(event) {
 	var name = document.querySelector('#name').value;
 	var email = document.querySelector('#email').value;
 	var password = document.querySelector('#password').value;
-    var confirmPassword = document.querySelector('#confirmPassword').value;
+  var confirmPassword = document.querySelector('#confirmPassword').value;
 
 	let accountData = JSON.parse(localStorage.getItem('account-data'));
 
@@ -147,21 +148,44 @@ form.addEventListener('submit', function(event) {
 		name: name,
 		email: email,
 		password: password,
-        confirmPassword:confirmPassword
+    confirmPassword:confirmPassword
 	};
-
+if( password == confirmPassword){
 	accountData.push(newAccountData);
 
-	localStorage.setItem('account-data', JSON.stringify(accountData));
 
+	localStorage.setItem('account-data', JSON.stringify(accountData));
+  
 	alert('Account created successfully!');
+  form.name.value="";
+  form.email.value="";
+  form.password.value="";
+  form.confirmPassword.value="";
+}else{
+    
+  alert("Password and Confirm Password not matched !")
+  form.password.value="";
+  form.confirmPassword.value="";
+}
+  
+
 });
 
 
+
+
+
+
+
+// shdjdks
+
+
  
+
 </script>
 
 </html>
+
 
 
 
