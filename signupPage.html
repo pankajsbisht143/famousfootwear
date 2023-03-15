@@ -18,11 +18,11 @@
 after{ clear: both; }
         #signup {
           margin: 50px auto;
-          width: 320px;
+          width: 400px;
         }
         #signup form {
-          margin: auto;
-          padding: 22px 22px 22px 22px;
+          margin:auto;
+          padding: 30px 30px 30px 30px;
           width: 100%;
           border-radius: 5px;
           background:whitesmoke;
@@ -43,46 +43,46 @@ after{ clear: both; }
         }
         #signup form input[type="email"] {
           background-color: white;
-          border-radius: 0px 3px 3px 0px;
+          border-radius: 0px 15px 15px 15px;
           color: #a9a9a9;
           margin-bottom: 1em;
           padding: 0 16px;
           width: 90%;
-          height: 50px;
+          height: 40px;
         }
         #signup form input[type="text"] {
           background-color: white;
-          border-radius: 0px 3px 3px 0px;
+          border-radius: 0px 15px 15px 15px;
           color: #a9a9a9;
           margin-bottom: 1em;
           padding: 0 16px;
           width: 90%;
-          height: 50px;
+          height: 40px;
         }
         #signup form input[type="password"] {
           background-color: white;
-          border-radius: 0px 3px 3px 0px;
+          border-radius: 0px 15px 15px 15px;
           color: #a9a9a9;
           margin-bottom: 1em;
           padding: 0 16px;
           width: 90%;
-          height: 50px;
+          height: 40px;
         }
         #signup form input[type="confirmPassword"] {
           background-color: white;
-          border-radius: 0px 3px 3px 0px;
+          border-radius: 0px 15px 15px 15px;
           color: #a9a9a9;
           margin-bottom: 1em;
           padding: 0 16px;
           width: 90%;
-          height: 50px;
+          height: 40px;
         }
         #signup form input[type="submit"] {
           background: lightblue;
           border: 0;
           width: 100%;
           height: 40px;
-          border-radius: 3px;
+          border-radius: 0px 15px 15px 15px;
           color: white;
           cursor: pointer;
           transition: background 0.3s ease-in-out;
@@ -93,11 +93,21 @@ after{ clear: both; }
         #monop{
           font-size: 13px;
           font-variant-position: inherit;
+          font-family: sans-serif;
         }
      .nav{
         margin-top: 5%;
+     }.length{
+      margin-top: -10;
+      margin-left: 10%;
+      list-style: none;
+      font-family: sans-serif;
+     }#sighin{
+      padding-left: 16%;
      }
-
+h4{
+  text-align: center;
+}
   </style>
 </head>
 
@@ -110,18 +120,19 @@ after{ clear: both; }
   <div id="signup">
     <h1 id="heading">Sign Up</h1>
     <form>
-      <label for="lname">Name</label>
+      <label for="name">Name</label>
       <input type="text" id="name" placeholder="Enter Full Name" required>
-      <label for="lemail">Email</label>
+      <label for="email">Email</label>
       <input type="email" id="email" placeholder="Enter @gmail.com" required>
-      <label for="lpass">Password</label>
+      <label for="pass">Password</label>
       <input type="password"  id="password"  placeholder="Enter Password" required>
-      <label for="lpass">Confirm Password</label>
+      <label for="pass">Confirm Password</label>
       <input type="password"  id="confirmPassword"  placeholder="Enter confirm Password" required>
-      <p id="monop">By signing up, I accept the FamousFootwewar Terms of Service and acknowledge the Privacy Policy.</p>
+      <p id="monop">By signing up, I accept the<b> FamousFootwewar.Com </b> Terms of Service and acknowledge the <b>Privacy Policy</b>.</p>
       <input type="submit" value="COUNTINUE" />
+      <h4> OR</h4>
       <ul class="helper-text">
-        <li class="length">Already have an account?
+        <li class="length">Already Have An Account ?
           <a href="./signin.html">Sign In</a></li>
       </ul>
     </form>
