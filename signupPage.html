@@ -8,8 +8,7 @@
   <title>Sign up Page</title>
   <style>
      
-        
-#h1b{
+     #h1b{
   margin: auto;
   width: 100%;
           height: 40px;
@@ -17,7 +16,7 @@
 }
 after{ clear: both; }
         #signup {
-          margin: 50px auto;
+          margin: 30px auto;
           width: 400px;
         }
         #signup form {
@@ -108,6 +107,25 @@ after{ clear: both; }
 h4{
   text-align: center;
 }
+#social{
+  display: flex;
+  justify-content:center ;
+  
+  
+}
+.imgS1{
+  padding-right: 4%;
+ width: 6%;
+}
+.imgS3{
+  padding-left: 4%;
+  width: 5.5%;
+}
+.imgS2{
+ color: blue;
+ width: 8%;
+}
+
   </style>
 </head>
 
@@ -129,13 +147,20 @@ h4{
       <label for="pass">Confirm Password</label>
       <input type="password"  id="confirmPassword"  placeholder="Enter confirm Password" required>
       <p id="monop">By signing up, I accept the<b> FamousFootwewar.Com </b> Terms of Service and acknowledge the <b>Privacy Policy</b>.</p>
+      
       <input type="submit" value="COUNTINUE" />
       <h4> OR</h4>
       <ul class="helper-text">
         <li class="length">Already Have An Account ?
           <a href="./signin.html">Sign In</a></li>
       </ul>
+      <div id="social">
+        <img class="imgS1" src="H:\Web-10\famousfootwear\images\google-icon.svg" alt="google"/>
+        <img class="imgS2" src="H:\Web-10\famousfootwear\images\facebook-icon.svg" alt="fb"/>
+       <img class="imgS3" src="H:\Web-10\famousfootwear\images\microsoft-icon.svg" alt="micro"/>
+      </div>
     </form>
+   
   </div>
 </body>
 <script>
@@ -167,14 +192,14 @@ if( password == confirmPassword){
 
 	localStorage.setItem('account-data', JSON.stringify(accountData));
   
-	alert('Account created successfully!');
+	alert('Account Created Successfully!');
   form.name.value="";
   form.email.value="";
   form.password.value="";
   form.confirmPassword.value="";
 }else{
     
-  alert("Password and Confirm Password not matched !")
+  alert("Password and Confirm Password not matched!")
   form.password.value="";
   form.confirmPassword.value="";
 }
@@ -188,7 +213,7 @@ if( password == confirmPassword){
 
 
 
-// shdjdks
+
 
 
  
