@@ -155,9 +155,9 @@ h4{
           <a href="./signin.html">Sign In</a></li>
       </ul>
       <div id="social">
-        <img class="imgS1" src="H:\Web-10\famousfootwear\images\google-icon.svg" alt="google"/>
-        <img class="imgS2" src="H:\Web-10\famousfootwear\images\facebook-icon.svg" alt="fb"/>
-       <img class="imgS3" src="H:\Web-10\famousfootwear\images\microsoft-icon.svg" alt="micro"/>
+        <img class="imgS1" src="H:\Web-10\Beta-Mark01\google-icon.svg" alt="google"/>
+        <img class="imgS2" src="H:\Web-10\Beta-Mark01\facebook-icon.svg" alt="fb"/>
+       <img class="imgS3" src="H:\Web-10\Beta-Mark01\microsoft-icon.svg" alt="micro"/>
       </div>
     </form>
    
@@ -186,7 +186,16 @@ form.addEventListener('submit', function(event) {
 		password: password,
     confirmPassword:confirmPassword
 	};
-if( password == confirmPassword){
+  
+  if(accountData.some((v)=> {return v.email == email}))
+  {
+    alert("Please Enter Another Mail");
+    form.email.value="";
+  }
+  else 
+  
+  {
+    if( password == confirmPassword ){
 	accountData.push(newAccountData);
 
 
@@ -197,26 +206,18 @@ if( password == confirmPassword){
   form.email.value="";
   form.password.value="";
   form.confirmPassword.value="";
-}else{
+}else {
     
-  alert("Password and Confirm Password not matched!")
+  alert("Password and Confirm-Password not matched!")
   form.password.value="";
   form.confirmPassword.value="";
+
 }
+ }
+
+
   
-
 });
-
-
-
-
-
-
-
-
-
-
- 
 
 </script>
 
