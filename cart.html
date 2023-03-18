@@ -6,27 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cart page</title>
     <style>
-        #parent{
-           display: flex;
-           justify-content: center;
-           gap: 700px;
+        body{
+            width: 100%;
+            margin: auto;
+            color: black;
+            /* background-color:  rgb(235,236,238) */
         }
         div>img{
-            width:  35px;
-            height: 28px;
+            width:  20px;
+            height: 15px;
             margin-top: 20px;
         }
-       .sp{
+        #parent>.sp{
             display: flex;
-            gap: 15px;
+            justify-content: space-around;
         }
-        /* #parent>.rk{
-            margin-top: 25px;
+        /* .rk{
+          margin-left: 50%;
+            
         } */
         #child{
             text-align: center;
-
+            
         }
+        .space>p>img{
+            width: 35px;
+            height: 30px;
+        }
+        .space>p>p{
+            display: block;
+            margin-right: 10px;
+        }
+        
         #child>h2{
             font-size: 50px;
             color: rgb(51,63,72);
@@ -41,7 +52,7 @@
         }
         #psb{
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             padding-top: 80px; 
         }
         #fash{
@@ -67,43 +78,356 @@
         #fash>img{
             width: 500px;
         }
+        #cartprod{
+            width: 80%;
+            display: flex;
+            gap: 30px;
+            margin: auto;
+           justify-content: center;
+           /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
+           /* margin-bottom: 20px; */
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+        #cartprod>img{
+            width: 160px;
+            height: 180px;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+            padding: 0px 0px 10px 10px;
+            
+            
+        }
+        /* #cartprod>.clas{
+         border: 2px solid;
+        } */
+        .class{
+            width: 40%;
+            margin-left: 20px;
+           
+        }
+        #rsk{
+            width: 40%;
+        }
+        .clas{
+           
+            width: 55%;
+        }
         
+        /* .clas>h3{
+            width:60%;
+            
+        } */
+       .clas p{
+        width: 35px;
+       }
+       
+       #rsk{
         
+        width: 50%;
         
-        
+       }
+       h2{
+        text-align: center;
+       }
+       /* #Offer>div>#carval{
+        border: 3px solid black;
+       } */
+        #cardval>p{
+            font-size: 40px;
+            font-weight: bold;
+        }
+       #cartval>p>span{
+        font-size: 40px;
+       }
+       #btn{
+        background-color: rgb(51,63,72);
+        color: aliceblue;
+        border: none;
+       }
+     #delbtn{
+      background-color:rgb(51,63,72);
+      color: white;
+      border: none;
+      border-radius: 3px;
+      width: 90px;
+      height: 30px;
+      margin-top: 84px;
+      margin-right: 20px;
+
+    }
+    #cardval>p{
+        text-align: center;
+    }
+    #Offer{
+
+        width: 100%;
+        height: 180px;
+        text-align: center;
+        margin: 10px 0px 10px 0px;
+       
+    }
+    #Offer>div>p{
+          font-weight: bold;
+          font-size: 25px;
+    }
+   
+   #Offer>div>button{
+    background-color:rgb(51,63,72);
+    color: white;
+    height: 35px;
+    width: 80px;
+    border: none;
+   }
+   /* proceed button */
+   #kranti>button{
+      height: 50px;
+        width: 400px;
+       
+        color: white;
+        border: none;
+        font-size: 25px;
+        background-color: rgb(51,63,72);
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+       
+       
+   }
+   #kranti>button:hover{
+      cursor: pointer;
+    
+   }
+   #kranti{
+    text-decoration: none;
+   }
+   .k>button{
+    width: 140px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    margin-right: 23px;
+   }
+   #project{
+     height: 50px;
+     
+     background-color: rgb(38, 34, 34);
+   }
+   #prefer>div{
+         display: flex;
+   }
+   #preft{
+    
+    display: flex;
+    width: 90%;
+   justify-content: center;
+   gap: 50px;
+   margin: auto;
+   
+   }
+   #shu{
+   
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 30%;
+   }
+   #child{
+    
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 70%;
+    
+   }
+   #promo{
+    width: 250px;
+    height: 30px;
+   }
+   #shubham{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: -13px;
+    margin-bottom: 15px;
+    
+   }
+   #shubham>img{
+    width: 90px;
+    height: 90px;
+    margin-left: 20px;
+    margin-top: -10px;
+   }
+  #shubham>div>p{
+    
+    margin-left: 10px;
+    text-justify: distribute-all-lines;
+  }
+  #pankaj-hr{
+    width: 100%;
+    background-color:rgb(51,63,72);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+  }
+  #email{
+    width: 400px;
+    height: 40px;
+    margin-left: 20px;
+  }
+  #shubham-span1{
+    color: red;
+
+  }
+  #shubham-span2{
+   color:  rgb(24, 29, 33);
+   font-size: 15px;
+   font-weight: bold;
+  }
+  #shubham-span3{
+    text-decoration: underline;
+  }
+  #pojit{
+    width:100%;
+    height: 5px;
+    background-color: black;
+  }
+  
+  
+   
+   @media only screen and (max-width: 900px) {
+        /* Medium Screen  */
+        #parent>.sp{
+            display: flex;
+            flex-direction: row;
+        }
+        #psb{
+            display: flex;
+            flex-direction: row;
+        }
+        #fash{
+            display: flex;
+            
+        }
+        #fash>div{
+            display: flex;
+        }
+        #cartprod{
+            display: flex;
+           
+        }
+        #prefer>div{
+         display: flex;
+   }
+   #preft{
+    
+    display: flex;
+   
+   
+   }
+      }
+      @media only screen and (max-width: 500px) {
+        /* Medium Screen  */
+        #parent>.sp{
+            display: flex;
+            flex-direction: column;
+        }
+        #psb{
+            display: flex;
+            flex-direction:column;
+            justify-content: space-around;
+           
+        }
+        #fash{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        #fash>div{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        #cartprod{
+            display: flex;
+           flex-direction: column;
+        }
+        #prefer>div{
+         display: flex;
+         flex-direction: column;
+   }
+   #preft{
+    display: flex;
+    flex-direction: column;
+   }
+      }
     </style>
 </head>
 <body>
     <div id="parent">
+        
         <div class="sp">
             
-        <img src="https://media.istockphoto.com/id/1148705812/vector/location-icon-vector-pin-sign-isolated-on-white-background-navigation-map-gps-direction.jpg?s=612x612&w=0&k=20&c=lqEIzW3QedZfytsX30NoBJbHxZZbWnlLsvEiwOSbaow=" alt=""> 
-        <div class="space">
-            <p>Guam Premier Outlets  </p>
-            <p>Open today 10:00am-9:00pm</p>
-        </div>
         
+        <div class="space">
+            <p> Guam Premier Outlets </p>
+            <p>Open today 10:00am-9:00pm</p>
+            
         </div>
         <div class="rk">
             <p>Free Shipping for Rewards or Orders $75+</p>
             <p>Sign In / Join Now</p>
         </div>
     </div>
-    <h2>Your Cart <span id="per">:-0</span>  Items</h2>
+    </div>
+    <div id="pankaj-hr" >
+     <h4>$10 off $50+, $15 off $75+, $20 off $100+ with code TIME2SAVE</h4>
+     <h4>Exclusions apply.</h4>
+    </div>
+       
+   
+    <h2>Your Cart:- <span id="per">0</span>  Items</h2>
+     <div id="preft">
       <div id="child">
            
-           <p>Have an account ? Sign in to see ur cart</p>
-           <button class="ps">CONTINUE SHOOPING</button>
       </div>
+      <div id="shu">
+        <div id="Offer">
+            <div>
+                <p>Apply Promo Code</p>
+                <input type="text" id="promo">
+                <button>Check</button>
+            </div> <br>
+        </div>
+          <div id="cardval">
+            <p>Total Price:-$ <span id="pr"> </span></p>
+          </div>
+            
+          
+          <div id="shubham">
+              <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/rewards-images/plcc-double.png?w=+1440&hash=68621878391AE4CD59361AC547BEFA9F" alt="">
+              <div>
+                <p><span id="shubham-span1">Enjoy $10 OFF Today*</span>  on your first purchase with the <span id="shubham-span2">FAMOUSLY YOU REWARDS® Credit Card</span>  at time of account opening. <span id="shubham-span3">Learn More</span> </p>
+              </div>
+          </div>
+          <div>
+            <a id="kranti" href="address.html"> <button>Checkout</button> </a>
+          </div>
+          <div id="pankaj-"></div>
+      </div>
+      
+    
+      
+    </div>
+      <span id="ok"> </span>
       <div id="psb">
            <p >Sign up for special offers & trend updates</p>
            <div class="k">
             <input type="text" name="email" id="email" placeholder="Email">
-            <button>Sign Up</button>
+            <button >Sign Up</button>
            </div>
            
       </div>
-      <hr >
+      <hr id="pojit">
       <div id="fash">
         <div >
             <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/rewards-images/rewards-refresh-2022/secondary-footer/free_shipping.svg" alt="box">
@@ -111,6 +435,7 @@
         <div >
             <h4>Free Shipping for Members</h4>
             <p>Plus, return your purchase to any store, at any time.</p>
+           
         </div>
         </div>
         
@@ -121,6 +446,7 @@
         <div>
             <h4>Famous Gift Cards</h4>
             <p>Fits every time! Physical card or instant eGift Card.</p>
+           
         </div>
         </div>
         <div>
@@ -129,6 +455,7 @@
         <div>
             <h4>Famously Fast Pickup</h4>
             <p>Order online, pick up in store or at the curb. Plus, members earn a bonus reward!</p>
+            
         </div>
         </div>
         <div>
@@ -137,38 +464,39 @@
         <div>
             <h4>Pay Your Way</h4>
             <p>Enjoy Zip, the Famously YOU Rewards® Credit Card and more.</p>
+           
         </div>
         </div>
-
+           
       </div>
-      <hr style="color:brown">
       
-
+      
+ 
     
 </body>
 </html>
 <script>
   var cart=JSON.parse(localStorage.getItem("cartProducts")) || [];
-  var ind=document.querySelector("#child").value;
-if(cart.length==0){
-     document.getElementById(parent).value;
+  document.querySelector("button").addEventListener("click", check);
+
+if(cart===0){
+     document.querySelector("body").value;
 }else{
+    
     displayCart(cart);
     updateCount(cart);
-    
-    
-}
-function deleteD(ind){
-          
-}
+    caltotal(cart)
 
+    
+    
+}
 function displayCart(cart){
-
-cart.map(function(elem){
+    document.querySelector("#child").textContent="";
+cart.map(function(elem,index){
        var div =document.createElement("div");
        div.setAttribute("id","cartprod");
        var image=document.createElement("img");
-       image.setAttribute("src",elem.image_url);
+       image.setAttribute("src",elem.img_u1);
        image.setAttribute("alt",elem.name);
        
        var divp=document.createElement("div");
@@ -178,29 +506,32 @@ cart.map(function(elem){
        h3.textContent=elem.name;
 
        var p=document.createElement("p");
-       p.textContent="width";
+       p.textContent="Brand:"+elem.brand;
 
        var pa=document.createElement("p");
-       pa.textContent="width";
+       pa.textContent="Width"+":";
   
        var par=document.createElement("p");
-       par.textContent="width";
+       par.textContent="Color"+":";
        
-       var h3s=document.createElement("td");
-       h3s.textContent="ONLY few Stock Left!";
+      
 
        var diva=document.createElement("div");
+       diva.setAttribute("id","rsk");
        
        var price=document.createElement("p");
-       price.textContent=elem.price;
+       price.textContent="$"+elem.price;
 
        var quantity=document.createElement("h2");
-         quantity.textContent="Quantity";
+         quantity.textContent="Qty";
 
          var span=document.createElement("span");
-         span.textContent="1";
+         span.textContent=" "+"1";
+
+        
 
        var increase=document.createElement("button");
+       increase.setAttribute("id","btn")
           increase.textContent="+";
           increase.onclick=function(){
             increaseval(span.textContent);
@@ -209,11 +540,15 @@ cart.map(function(elem){
               var pr=parseInt(value)+1;
               var va=pr*(elem.price);
               span.textContent=pr;
-              finalPrice.textContent="₹"+va;
-          }
-          
+              price.textContent="$"+va;
+              var a= document.getElementById("pr").textContent;
+             var last=parseInt(a)+parseInt(elem.price);
+             document.getElementById("pr").textContent=last;
 
+          }
+         
           var decrease=document.createElement("button");
+          decrease.setAttribute("id","btn")
           decrease.textContent="-";
           decrease.onclick=function(){
             decreaseval(span.textContent);
@@ -225,25 +560,74 @@ cart.map(function(elem){
             var pr=parseInt(value)-1;
             var va=pr*elem.price
             span.textContent=pr;
-              finalPrice.textContent="₹"+va;
+              price.textContent="$"+va;
+          var a= document.getElementById("pr").textContent;
+       var last=parseInt(a)-parseInt(elem.price);
+        document.getElementById("pr").textContent=last;
+        }
+        
             } 
-          }
+          
 
+          var tree=document.createElement("div");
+         tree.setAttribute("id","pers");
+
+         var del=document.createElement("button");
+         del.setAttribute("id","delbtn")
+         del.textContent="Remove";
+         del.addEventListener("click",function(){
+           delrow(elem);
+      })
+      
         quantity.append(span);
         diva.append(price,increase,quantity,decrease);
-        divp.append(h3,p,pa,par,h3s);
-        div.append(image,divp,diva);
+        divp.append(h3,p,pa,par);
+        tree.append(del);
+       
+        div.append(image,divp,diva,tree);
         document.querySelector("#child").append(div);
 
     
 });
 
 }
+
+function delrow(elem){
+    
+        cart.splice(elem,1);
+        localStorage.setItem("cartProducts",JSON.stringify(cart))
+        displayCart(cart);
+        caltotal(cart);
+        updateCount(cart);
+    }
 function updateCount(cart){
     document.getElementById("per").textContent=cart.length;
-
-    
 }
+
+var cart=localStorage.getItem("cartp")
+function caltotal(){
+    var carval=0;
+    for(var i=0;i<cart.length;i++){
+        carval+=parseInt(cart[i].price);
+         
+    }
+    document.getElementById("pr").textContent=carval;
+   localStorage.setItem("cartp",JSON.stringify(cardval) );
+   }
+   function check(){
+        var ch = document.getElementById("promo").value;
+        console.log(ch);
+        if(ch == "masai30"){
+            var temp = document.createElement("p");
+            temp.setAttribute("class","krp");
+            alert(temp = "Hurray!... You got 30% off");
+            document.getElementById("Offer").append(temp);
+            var t = parseInt(document.getElementById("pr").textContent);
+            var change = (t*3)/10;
+            document.getElementById("pr").textContent = t - change;
+        }
+    }
+    
    
 </script>
-</script>
+
