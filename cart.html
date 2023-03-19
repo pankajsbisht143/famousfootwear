@@ -1785,6 +1785,7 @@ function displayCart(cartAr){
     document.querySelector("#child").textContent="";
     console.log(cartAr);
        cartAr.map(function(elem){
+        var pyr=localStorage.getItem("sizeList");
        var div=document.createElement("div");
        div.setAttribute("id","cartprod");
        var image=document.createElement("img");
@@ -1801,10 +1802,9 @@ function displayCart(cartAr){
        p.textContent="Brand:"+elem.brand;
 
        var pa=document.createElement("p");
-       pa.textContent="Width"+":";
+       pa.textContent="Width:"+pyr;
 
-       var par=document.createElement("p");
-       par.textContent="Color"+":";
+       
 
        var diva=document.createElement("div");
        diva.setAttribute("id","rsk");
@@ -1871,7 +1871,7 @@ function displayCart(cartAr){
       
         quantity.append(span);
         diva.append(price,increase,quantity,decrease);
-        divp.append(h3,p,pa,par);
+        divp.append(h3,p,pa);
         tree.append(del);
        
         div.append(image,divp,diva,tree);

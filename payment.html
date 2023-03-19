@@ -247,7 +247,7 @@
                         </form>
                             <input type="checkbox" id = "checkBox"/>
                             <label for="checkBox" style = "font-size: 14px; margin-left: 8px;">Save this card for faster payment</label>
-                            <button id = "myBtn2" onclick="successfulPayment()">PAY NOW</button>
+                        <a href="./otp.html"><button id = "myBtn2" onclick="successfulPayment()">PAY NOW</button></a>
                     </div>
                 </div>
             </div> 
@@ -312,9 +312,9 @@ function showMore() {
             return;
         }
     }
-    setTimeout(function(){ 
-      window.location.href = "otp.html"; 
-    }, 3000);
+    
+    //   window.location.href = "./otp.html"; 
+   
     
     
   }
