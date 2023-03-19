@@ -1065,6 +1065,7 @@ footer .content .link-boxes .input-box {
             {
                 cartArr.push(elem);
                 console.log(cartArr);
+                window.location.assign("./cart.html");
                 localStorage.setItem("cartProducts",JSON.stringify(cartArr));
             }
 

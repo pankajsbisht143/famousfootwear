@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>men</title>
+    <title>women</title>
     <style>
 
         /* navbar */
@@ -973,6 +973,17 @@ footer .content .link-boxes .input-box {
         width: 100%;
     }
   }
+  #men_logo
+  {
+    display: flex;
+    justify-content: space-between;
+  }
+  #men_logo img
+  {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+  }
 
     </style>
 
@@ -1463,9 +1474,14 @@ footer .content .link-boxes .input-box {
       </nav> 
       <hr/>
     <div id="men_logo">
-       <h2>Men's  Shoes</h2>
-       <h3>Shoes / Mens</h3>
-       <h2></h2>
+        <div>
+            <h2>Vans  Shoes</h2>
+            <h3>Shoes / Vans</h3>
+       </div>
+       <div id="logimg">
+        <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/vans.svg" alt="">
+       </div>
+        
     </div>
     <div id="master">
         
@@ -1486,18 +1502,6 @@ footer .content .link-boxes .input-box {
             <hr></div>  
 
           <!-- <label for="brand">Brands</label> -->
-           <select id="brand"  onchange="handleBrand()">
-            <option value="">Brand</option>
-            <option value="Nike">Nike</option>
-            <option value="Adidas">Adidas</option>
-            <option value="Vans">Vans</option>
-            <option value="Croas">Croas</option>
-            <option value="New Balance">New Balance</option>
-            <option value="Puma">Puma</option>
-          </select>
-
-          <div style="width: 100%;"> 
-            <hr></div> 
            
           <!-- <label for="priceE">Prices</label> -->
            <select id="priceE"  onchange="handlePrice()">
@@ -1596,16 +1600,6 @@ footer .content .link-boxes .input-box {
            
         </div>
     </div>
-    <div id="menshop">
-        <hr>
-        <h1>Shop Men's Shoes</h1>
-        <p>Our broad selection of men’s shoes lets you choose the impression you want to make. Aiming to dress to impress on your next date night or command the boardroom in style? Slip into slick styles from our collection of men’s dress shoes. Ready to kick off the weekend and enjoy some down time? Give off a chill vibe in a pair of our laid-back loafers, clogs or slippers. Looking to work up a sweat or set for a new personal record? Browse our huge selection of men’s athletic shoes and men's running shoes to take it to the next level.</p>
-        <p>No matter what look you’re going for, our selection of men’s footwear will be with you every step of the way. Like when you want to get out and explore the great outdoors in men’s hiking boots. Get through the day comfortably in work shoes and work boots. Or when it’s time to kick back and relax in men's sandals—remember, sandals are just as easy to slip off as they are to slip into. Start a new hobby or rediscover an old one, the important thing is to follow your passion. Look and feel your best every step of the way in casual slip-ons or boat shoes.</p>
-        <p>For any occasion, to wear anywhere—step out with confidence in the perfect pair of shoes for men from your favorite brands at Famous Footwear. And celebrate all of the moments that make your life Famous. Because we know that when you look your best, you feel your best—and then the things that you can accomplish are as endless as the steps you take.</p>
-        <p>Want your shoes right now? Buy online and pickup in-store or at curbside in about an hour with our Famously Fast Pickup. Or have them delivered straight to your door. Rewards members get free shipping on all orders.</p>
-        <p>Find your next pair of shoes today!</p>
-
-    </div>
 
 
     <footer>
@@ -1689,231 +1683,134 @@ footer .content .link-boxes .input-box {
 </body>
 </html>
 <script>
-    var menProd=[
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/96/06/9/96069_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/96/06/9/96069_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/96/06/9/96069_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/96/06/9/96069_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/96/06/9/96069_back_feed1000.jpg",
-         Details:"Leather upper in a high-top lifestyle sneaker style",
-         MRP:"79",
-         type:"Sneaker",
-         color:"Grey",
-         brand:"Nike",
-         name:"Men's Court Royale 2 High Top Sneaker",
-         price:"70",
-         rate_img:"5.png",
-         rating:"5",
-         
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_back_feed1000.jpg",
-         Details:"Leather upper in a high-top lifestyle sneaker style",
-         MRP:"89",
-         type:"Sneaker",
-         brand:"Nike",
-         color:"White",
-         name:"Men's Court Royale 2 High Top Sneaker",
-         price:"85",
-         rate_img:"0.png",
-         rating:"0",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/32/6/38326_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/32/6/38326_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/32/6/38326_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/32/6/38326_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/32/6/38326_back_feed1000.jpg",
-         Details:"Flat wide base gives you enhanced stability",
-         MRP:"99",
-         type:"Sneaker",
-         color:"Red",
-         brand:"Nike",
-         name:"Men's Air Max Alpha Trainer 5 Sneaker",
-         price:"90",
-         rate_img:"5.png",
-         rating:"5",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_back_feed1000.jpg",
-         Details:"Mesh and synthetic upper in a fashion sneaker style with a round toe",
-         MRP:"100.9",
-         type:"Sneaker",
-         color:"Black",
-         brand:"Adidas",
-         name:"Men's Kaptir 2.0 Magic Sneaker ",
-         price:"89.99",
-         rate_img:"4.png",
+var menProd=[
+    {
+        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/50/24/4/50244_right_feed1000.jpg",
+        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/50/24/4/50244_pair_feed1000.jpg",
+        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/50/24/4/50244_back_feed1000.jpg",
+        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/50/24/4/50244_top_feed1000.jpg",
+        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/50/24/4/50244_lifestyle_feed1000.jpg",
+
+        details:"Canvas or leather upper in an athletic slip-on skate style",
+        type:"Shoe",
+        brand:"Vans",
+        name:"Women's Asher Slip On Sneaker",
+        price:"59.99",
+        MRP:"65",
+        rate_img:"4.png",
          rating:"4",
         },
         {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_back_feed1000.jpg",
-         Details:"Foam midsole with a Max Air unit at the heel",
-         MRP:"100.99",
-         type:"Sneaker",
-         color:"White",
-         brand:"Nike",
-         name:"Men's Air Max Alpha Trainer 5 Sneaker",
-         price:"89.99",
-         rate_img:"5.png",
+        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/40/34/0/40340_right_feed1000.jpg",
+        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/40/34/0/40340_pair_feed1000.jpg",
+        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/40/34/0/40340_top_feed1000.jpg",
+        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/40/34/0/40340_left_feed1000.jpg",
+        img_u5:"",
+
+        details:"Women's Range EXP Skate Shoe",
+        type:"Shoe",
+        brand:"Vans",
+        name:"Women's Range EXP Skate Shoe",
+        price:"75",
+        MRP:"80",
+        rate_img:"3.png",
+         rating:"3",
+        },
+        {
+        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/40/29/2/40292_right_feed1000.jpg",
+        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/40/29/2/40292_pair_feed1000.jpg",
+        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/40/29/2/40292_top_feed1000.jpg",
+        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/40/29/2/40292_left_feed1000.jpg",
+        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/40/29/2/40292_back_feed1000.jpg",
+
+        details:"Canvas upper in a skate shoe style with a round toe",
+        type:"Shoe",
+        brand:"Vans",
+        name:"Women's Doheny Sneaker",
+        price:"64",
+        MRP:"70",
+        rate_img:"5.png",
          rating:"5",
         },
         {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_back_feed1000.jpg",
-         Details:"Synthetic leather upper in a mid-top basketball inspired sneaker with a round toe",
-         MRP:"159",
-         type:"Sneaker",
-         color:"White",
-         brand:"Adidas",
-         name:"Men's Hoops 3.0 Mid Magic Sneaker",
-         price:"129",
-         rate_img:"5.png",
+        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/40/33/7/40337_right_feed1000.jpg",
+        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/40/33/7/40337_pair_feed1000.jpg",
+        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/40/33/7/40337_top_feed1000.jpg",
+        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/40/33/7/40337_left_feed1000.jpg",
+        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/40/33/7/40337_back_feed1000.jpg",
+
+        details:"Canvas upper in a low top skate sneaker style with a round toe",
+        type:"Shoe",
+        brand:"Vans",
+        name:"Women's Ward Low Top Sneaker",
+        price:"78",
+        MRP:"90",
+        rate_img:"3.png",
+         rating:"3",
+        },
+        {
+        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/40/34/2/40342_right_feed1000.jpg",
+        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/40/34/2/40342_pair_feed1000.jpg",
+        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/40/34/2/40342_top_feed1000.jpg",
+        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/40/34/2/40342_left_feed1000.jpg",
+        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/40/34/2/40342_back_feed1000.jpg",
+
+        details:"Canvas upper in a platform sneaker style with a round toe",
+        type:"Shoe",
+        brand:"Vans",
+        name:"Women's Seldan Platform ST Sneaker",
+        price:"76",
+        MRP:"83",
+        rate_img:"3.png",
+         rating:"3",
+        },
+        {
+        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/40/28/7/40287_right_feed1000.jpg",
+        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/40/28/7/40287_pair_feed1000.jpg",
+        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/40/28/7/40287_top_feed1000.jpg",
+        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/40/28/7/40287_left_feed1000.jpg",
+        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/40/28/7/40287_back_feed1000.jpg",
+
+        details:"Canvas upper in a platform sneaker style with a round toe",
+        type:"Shoe",
+        brand:"Vans",
+        name:"Women's Filmore Hi Platform ST Sneaker",
+        price:"89.99",
+        MRP:"95",
+        rate_img:"5.png",
          rating:"5",
         },
         {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_back_feed1000.jpg",
-         Details:"Synthetic leather upper in a mid-top basketball inspired sneaker with a round toe",
-         MRP:"100.99",
-         type:"Sneaker",
-         color:"White",
-         brand:"Nike",
-         name:"Men's Air Max Alpha Trainer 5 Sneaker",
-         price:"89.99",
-         rate_img:"0.png",
-         rating:"0",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/98/19/2/98192_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/98/19/2/98192_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/98/19/2/98192_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/98/19/2/98192_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/98/19/2/98192_back_feed1000.jpg",
-         Details:"Lace-up closure",
-         MRP:"89",
-         type:"Sneaker",
-         color:"Red",
-         brand:"Adidas",
-         name:"Men's Hoops 3.0 Mid Magic Sneaker",
-         price:"69.9",
-         rate_img:"5.png",
-         rating:"5",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/41/36/1/41361_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/41/36/1/41361_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/41/36/1/41361_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/41/36/1/41361_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/41/36/1/41361_back_feed1000.jpg",
-         Details:"https://www.famousfootwear.com/blob/product-images/20000/41/36/1/41361_back_feed1000.jpg",
-         MRP:"39",
-         type:"Sandal",
-         color:"Grey",
-         brand:"Croas",
-         name:"Classic Slide Sandal (Cheapest Price)",
-         price:"29",
-         rate_img:"0.png",
-         rating:"0",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/32/51/4/32514_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/32/51/4/32514_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/32/51/4/32514_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/32/51/4/32514_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/32/51/4/32514_back_feed1000.jpg",
-         Details:"Textile and suede upper in a fashion sneaker style with a round toe",
-         MRP:"69",
-         type:"Shoe",
-         color:"Grey",
-         brand:"New Balance",
-         name:"Men's 515 Jogger ZXPS (Exclusive)",
-         price:"59",
-         rate_img:"0.png",
-         rating:"0",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/26/2/38262_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/26/2/38262_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/26/2/38262_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/26/2/38262_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/26/2/38262_back_feed1000.jpg",
-         Details:"New Balance N side logo",
-         MRP:"99",
-         type:"Sneaker",
-         color:"White",
-         brand:"New Balance",
-         name:"Men's 237 Sneaker New Balance",
-         price:"79",
-         rate_img:"5.png",
-         rating:"5",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/12/1/38121_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/12/1/38121_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/12/1/38121_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/12/1/38121_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/12/1/38121_back_feed1000.jpg",
-         Details:"Mesh upper in a basketball shoe style with a round toe",
-         MRP:"129",
-         type:"Shoe",
-         color:"Grey",
-         brand:"Nike",
-         name:"Giannis Immortality 2 Basketball Shoe",
-         price:"109",
-         rate_img:"5.png",
-         rating:"5",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/40/66/3/40663_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/40/66/3/40663_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/40/66/3/40663_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/40/66/3/40663_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/40/66/3/40663_back_feed1000.jpg",
-         Details:"Smooth lining with a padded contoured footbed",
-         MRP:"60",
-         type:"Sandal",
-         color:"Grey",
-         brand:"Adidas",
-         name:"Men's Alphabounce 2.0 Adjustable Slide Sandal",
-         price:"49.9",
-         rate_img:"2.png",
+        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/98/20/3/98203_right_feed1000.jpg",
+        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/98/20/3/98203_pair_feed1000.jpg",
+        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/98/20/3/98203_top_feed1000.jpg",
+        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/98/20/3/98203_left_feed1000.jpg",
+        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/98/20/3/98203_back_feed1000.jpg",
+
+        details:"Canvas or leather upper in an athletic slip-on skate style",
+        type:"Shoe",
+        brand:"Vans",
+        name:"Women's Asher Slip On Sneaker",
+        price:"90",
+        MRP:"95",
+        rate_img:"2.png",
          rating:"2",
         },
         {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/52/18/8/52188_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/52/18/8/52188_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/52/18/8/52188_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/52/18/8/52188_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/52/18/8/52188_back_feed1000.jpg",
-         Details:"Soft lining with cushioned insole",
-         MRP:"149",
-         type:"Sneaker",
-         color:"White",
-         brand:"Nike",
-         name:"Men's Court Vision Low Sneaker",
-         price:"129",
-         rate_img:"5.png",
-         rating:"5",
+        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/91/20/5/91205_right_feed1000.jpg",
+        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/91/20/5/91205_pair_feed1000.jpg",
+        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/91/20/5/91205_top_feed1000.jpg",
+        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/91/20/5/91205_left_feed1000.jpg",
+        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/91/20/5/91205_back_feed1000.jpg",
+
+        details:"Canvas or leather upper in an athletic slip-on skate style",
+        type:"Shoe",
+        brand:"Vans",
+        name:"Women's Cozy Asher Slip On",
+        price:"87",
+        MRP:"90",
+        rate_img:"4.png",
+         rating:"4",
         },
         {
          img_u1:"https://www.famousfootwear.com/blob/product-images/20000/40/34/4/40344_right_feed1000.jpg",
@@ -1963,230 +1860,7 @@ footer .content .link-boxes .input-box {
          rate_img:"5.png",
          rating:"5",
         },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/27/3/38273_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/27/3/38273_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/27/3/38273_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/27/3/38273_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/27/3/38273_back_feed1000.jpg",
-         Details:"Smooth lining with a padded insole",
-         MRP:"79.99",
-         type:"Shoe",
-         color:"White",
-         brand:"New Balance",
-         name:"Men's V8 520 Medium/Wide Running",
-         price:"79",
-         rate_img:"5.png",
-         rating:"5",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/77/78/0/77780_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/77/78/0/77780_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/77/78/0/77780_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/77/78/0/77780_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/77/78/0/77780_back_feed1000.jpg",
-         Details:"Smooth lining with a padded insole",
-         MRP:"130",
-         type:"Shoe",
-         color:"Orange",
-         brand:"New Balance",
-         name:"Men's Fresh Foam Roav Running Shoe",
-         price:"129",
-         rate_img:"4.png",
-         rating:"4",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/40/73/7/40737_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/40/73/7/40737_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/40/73/7/40737_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/40/73/7/40737_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/40/73/7/40737_back_feed1000.jpg",
-         Details:"High arch support, featuring a bamboo inspired texture for traction under your feet",
-         MRP:"49",
-         type:"Sandal",
-         color:"Brown",
-         brand:"Reef",
-         name:"Men's Santa Ana  AMZ Flip Flop Sandal",
-         price:"39",
-         rate_img:"3.png",
-         rating:"3",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/31/58/1/31581_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/31/58/1/31581_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/31/58/1/31581_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/31/58/1/31581_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/31/58/1/31581_back_feed1000.jpg",
-         Details:"Durable rubber sponge outsole",
-         MRP:"49",
-         type:"Sandal",
-         color:"Brown",
-         brand:"Reef",
-         name:"Men's Anchor Flip Flop AMZ Sandal",
-         price:"39",
-         rate_img:"3.png",
-         rating:"3",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/98/38/7/98387_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/98/38/7/98387_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/98/38/7/98387_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/98/38/7/98387_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/98/38/7/98387_back_feed1000.jpg",
-         Details:"Durable rubber sponge outsole",
-         MRP:"69",
-         type:"Shoe",
-         color:"Blue",
-         brand:"Reef",
-         name:"Men's Cushion Coast Slip On Shoe",
-         price:"59",
-         rate_img:"5.png",
-         rating:"5",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_back_feed1000.jpg",
-         Details:"Leather upper in a high-top lifestyle sneaker style",
-         MRP:"99",
-         type:"Sneaker",
-         color:"",
-         brand:"Nike",
-         name:"Men's Court  Sneaker  Magic (Exclusive)",
-         price:"79",
-         rate_img:"4.png",
-         rating:"4",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_back_feed1000.jpg",
-         Details:"Mesh and synthetic upper in a fashion sneaker style with a round toe",
-         MRP:"129",
-         type:"Sneaker",
-         color:"Black",
-         brand:"Adidas",
-         name:"Men's Kaptir 1.0 Sneaker amazing",
-         price:"99.99",
-         rate_img:"5.png",
-         rating:"5",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/70/52/1/70521_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/70/52/1/70521_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/70/52/1/70521_top_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/70/52/1/70521_right_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/70/52/1/70521_back_feed1000.jpg",
-         Details:"Smooth or embellished design",
-         MRP:"79",
-         type:"Sandal",
-         color:"Black",
-         brand:"Croas",
-         name:"Classic Clog  Croas Sandal Magic",
-         price:"69",
-         rate_img:"4.png",
-         rating:"4",
-        },
-        {
-         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/71/33/8/71338_right_feed1000.jpg",
-         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/71/33/8/71338_pair_feed1000.jpg",
-         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/71/33/8/71338_left_feed1000.jpg",
-         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/71/33/8/71338_top_feed1000.jpg",
-         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/71/33/8/71338_back_feed1000.jpg",
-         Details:"Lightweight, flexible EVA outsole",
-         MRP:"69",
-         type:"Sandal",
-         color:"Black",
-         brand:"Reef",
-         name:"Men's Cushion Coast Slip On  Amz",
-         price:"59",
-         rate_img:"4.png",
-         rating:"4",
-        },
-        {
-        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/30/6/38306_right_feed1000.jpg",
-        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/30/6/38306_pair_feed1000.jpg",
-        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/30/6/38306_top_feed1000.jpg",
-        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/30/6/38306_left_feed1000.jpg",
-        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/30/6/38306_back_feed1000.jpg",
-
-        details:"Mesh upper in a running shoe style with a round toe",
-        type:"Shoe",
-        brand:"Puma",
-        name:"Men's Carina Court Sneaker",
-        price:"89",
-        MRP:"95",
-        rate_img:"3.png",
-         rating:"3",
-        },
-        {
-        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/40/3/38403_right_feed1000.jpg",
-        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/40/3/38403_pair_feed1000.jpg",
-        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/40/3/38403_top_feed1000.jpg",
-        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/40/3/38403_left_feed1000.jpg",
-        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/40/3/38403_back_feed1000.jpg",
-
-        details:"Leather upper in an athletic fashion sneaker style with a round toe",
-        type:"Shoe",
-        brand:"Puma",
-        name:"Men's Carina Court Sneaker",
-        price:"90",
-        MRP:"100",
-        rate_img:"0.png",
-         rating:"0",
-        },
-        {
-        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/38/8/38388_right_feed1000.jpg",
-        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/38/8/38388_pair_feed1000.jpg",
-        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/38/8/38388_top_feed1000.jpg",
-        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/38/8/38388_left_feed1000.jpg",
-        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/38/8/38388_back_feed1000.jpg",
-
-        details:"Synthetic upper in a sneaker style with a round toe",
-        type:"Shoe",
-        brand:"Puma",
-        name:"Men's Carina Street Court Sneaker",
-        price:"89",
-        MRP:"96",
-        rate_img:"5.png",
-         rating:"5",
-        },
-        {
-        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/39/4/38394_right_feed1000.jpg",
-        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/39/4/38394_pair_feed1000.jpg",
-        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/39/4/38394_top_feed1000.jpg",
-        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/39/4/38394_left_feed1000.jpg",
-        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/39/4/38394_back_feed1000.jpg",
-
-        details:"Mesh upper in a sneaker style with a round toe",
-        type:"Shoe",
-        brand:"Puma",
-        name:"Men's Softride Enzo Sneaker",
-        price:"78",
-        MRP:"85",
-        rate_img:"0.png",
-         rating:"0",
-        },
-        {
-        img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/39/9/38399_right_feed1000.jpg",
-        img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/39/9/38399_pair_feed1000.jpg",
-        img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/39/9/38399_top_feed1000.jpg",
-        img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/39/9/38399_left_feed1000.jpg",
-        img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/39/9/38399_back_feed1000.jpg",
-
-        details:"Mesh upper in a sneaker style with a round toe",
-        type:"Shoe",
-        brand:"Puma",
-        name:"Men's Pacer Street Plus Sneaker",
-        price:"86",
-        MRP:"92",
-        rate_img:"5.png",
-         rating:"5",
-        },
+        
     ]
 
     displayMenProd(menProd);
