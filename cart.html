@@ -6,27 +6,763 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cart page</title>
     <style>
-        #parent{
-           display: flex;
-           justify-content: center;
-           gap: 700px;
+        a {
+    text-decoration: none;
+    color: black;
+}
+
+
+nav{
+   
+  margin: auto;
+  z-index: 99;
+  width: 80%;
+ text-align: center;
+  background-color: white;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+nav .wrapper{
+  position: relative;
+  max-width:100%;
+  /* padding: 0px 30px; */
+  height:70px;
+  line-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.wrapper .logo a{
+  color:#242526;
+ 
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.wrapper .nav-links{
+  display: inline-flex;
+ margin-bottom: -200px;
+ margin-top: 20px;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links li a{
+
+  color: #3A3B3C;
+  text-decoration: none;
+  font-size:medium;
+  font-weight:530;
+  padding: 9px 15px;
+font-stretch:ultra-expanded;
+
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+ 
+  text-decoration: underline;
+}
+.nav-links .mobile-item{
+  display: none;
+}
+.nav-links .drop-menu{
+  position: absolute;
+  background-color: white;
+  width: 180px;
+  line-height: 10px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box{
+  transition: all 0.3s ease;
+  top: 47px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a{
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+.mega-box{
+  position: absolute;
+  left: 0;
+  width:100%;
+  background: white;
+  background-size: 100% 100%;
+  padding: 0 30px;
+  margin-top: 7%;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content{
+  background-color: white;
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.mega-box .content .row{
+  width: calc(25% - 30px);
+  line-height: 30px;
+}
+.content .row img{
+  width: 100%;
+  height: 90%;
+  padding: 4px;
+  object-fit: cover;
+}
+.content .row header{
+  color:#333f48;
+  font-size: 20px;
+  font-weight: 500;
+}
+.content .row .mega-links{
+  margin-left: -40px;
+  border-left: 1px solid rgba(255,255,255,0.09);
+}
+.row .mega-links li{
+  padding: 0 20px;
+}
+.row .mega-links li a{
+  padding: 0px;
+  padding: 0px 20px;
+  color:#333f48;
+  font-size: 17px;
+  display: block;
+}
+
+.wrapper .btn{
+  color: #fff;
+  font-size: 10px;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.close-btn{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+nav input{
+  display: none;
+}
+
+.body-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  padding: 0 30px;
+}
+.body-text div{
+  font-size: 40px;
+  font-weight: 600;
+}
+
+ #content{
+  display:grid;
+  grid-template-columns: repeat(5,1fr);
+  /* gap:0px; */
+} 
+
+#content img{
+  display: flex;
+  /* padding: 20px;  */
+  width: 180px;
+  height: 180px; 
+  
+}
+
+#upper{
+  display: flex;
+ 
+  justify-content: flex-end;
+  align-items: center; 
+  align-content: center;
+   gap:4%; 
+  color:#333f48;
+  margin-bottom: -20px;
+  text-decoration: none; 
+}
+#upper i{
+  font-size:x-large;
+  color:rgba(0, 0, 0, 0.696);
+  margin-left:0.5%;
+
+}
+#upper button{
+  display: flex;
+  width: 100%;
+ background-color: white;
+  align-items: center;
+  height: 5%;
+  margin-top: 40px;
+  border-color: #9cacbe;
+  text-decoration: none;
+}
+
+#upper button p{
+  color:#9cacbe;
+  font-size:large;
+  font-weight: 500;
+text-decoration: none;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.logo img{
+  display: flex;
+height:200px;
+  width: 200px;
+}
+
+.desktop-item{
+  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ color:
+ #d50032;
+ font-size:medium;
+}
+.desktop-item:hover{
+  text-decoration: underline;
+}
+.row header{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:xx-large;
+  font-weight:900;
+}
+.sizebox>.mega-links{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  text-decoration: underline;
+
+  color:
+#333f48;
+font-size: xx-large;
+font-weight: 900;
+text-decoration-style: solid;
+text-underline-offset:20%;
+}
+
+@media screen and (max-width:1106px)
+{
+  .nav-links li a{
+    font-size: 16px;
+    padding: 0px 8px;
+  }
+}
+@media screen and (max-width:982px)
+{
+  .nav-links li a{
+    font-size: 15px;
+    padding: 0px 8px;
+  }
+}
+@media screen and (max-width: 970px) {
+
+  .wrapper .btn{
+    display: block;
+  }
+  #upper>a>i{
+    visibility: hidden;
+
+  }
+  #upper button{
+    display: flex;
+    width:100%;
+    height:30%;
+    margin-left: 40%;
+    margin-top:-1%;
+  }
+  #upper button p{
+    color:#9cacbe;
+    font-size:medium;
+    font-weight: 200;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  }
+  .wrapper .nav-links{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: #242526;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;
+  }
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3A3B3C;
+  }
+  #menu-btn:checked ~ .nav-links{
+    left: 0%;
+  }
+  #menu-btn:checked ~ .btn.menu-btn{
+    display: none;
+  }
+  #close-btn:checked ~ .btn.menu-btn{
+    display: block;
+  }
+  .nav-links li{
+    margin: 15px 10px;
+  }
+  .nav-links li a{
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .nav-links .drop-menu{
+    position: static;
+    opacity: 1;
+    top: 65px;
+    visibility: visible;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+  #showDrop:checked ~ .drop-menu,
+  #showMega:checked ~ .mega-box{
+    max-height: 100%;
+  }
+  .nav-links .desktop-item{
+    display: none;
+  }
+  .nav-links .mobile-item{
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-links .mobile-item:hover{
+    background: #3A3B3C;
+  }
+  .drop-menu li{
+    margin: 0;
+  }
+  .drop-menu li a{
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .mega-box{
+    position: static;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content{
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row{
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2){
+    border-top: 0px;
+  }
+  .content .row .mega-links{
+    border-left: 0px;
+    padding-left: 15px;
+  }
+  .row .mega-links li{
+    margin: 0;
+  }
+  .content .row header{
+    font-size: 19px;
+  }
+  .upper{
+      display: flex;
+      align-items: center;
+  }
+}
+@media screen and (max-width:641px)
+{
+
+.logo img{
+  height: 150px;
+  width: 150px;
+
+}
+#upper>a>button{
+visibility: hidden;
+}
+
+#upper>a>i{
+
+visibility: visible;
+
+}
+
+.logo{
+margin-left:-10%;
+margin-right: -30%;
+}
+}
+@media screen and(max-width:400px)
+{
+.logo img{
+  height: 90px;
+  width: 90px;
+
+}
+.sign>p{
+  font-size: smaller;
+}
+#upper>a>i{
+  font-size: small;
+}
+}
+       
+       footer{
+    /* position: fixed; */
+    background:#f0f0f0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: none;
+    text-decoration: none;
+    line-height: 20px;
+    border-top:5px solid #d50032;
+   
+     
+    
+   
+  }
+  
+  footer .content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 40px 40px 40px;
+  }
+  
+    
+  
+  footer .content .link-boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 5 - 10px);
+  }
+  .content .link-boxes .box .link_name{
+    color:#333f48;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .content .link-boxes .box li{
+    margin: 6px 0;
+    list-style: none;
+  }
+  .content .link-boxes .box li a{
+    
+    color: black;
+    
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+    font-size:14px;
+  font-weight: 300;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .content .link-boxes .box li a:hover{
+    opacity: 1;
+    text-decoration: underline;
+  }
+  .content .link-boxes .input-box{
+    margin-right: 55px;
+  }
+  .link-boxes .input-box input{
+    height: 40px;
+    width: calc(100% + 55px);
+    outline: none;
+    border: 2px solid #AFAFB6;
+    background: #140B5C;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  .link-boxes .input-box input::placeholder{
+    color: #AFAFB6;
+    font-size: 16px;
+  }
+  .link-boxes .input-box input[type="button"]{
+    background: #fff;
+    color: #140B5C;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 4px 0;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .input-box input[type="button"]:hover{
+    opacity: 1;
+  }
+  footer .bottom-details{
+    width: 100%;
+    background: #0F0844;
+  }
+  footer .bottom-details .bottom_text{
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+  /* .bottom-details .bottom_text a:hover{
+    opacity: 1;
+    text-decoration: underline;
+  }
+  .bottom-details .bottom_text a{
+    margin-right: 10px;
+  } */
+  .prep{
+    width: 80%;
+    margin: auto;
+    color: #333f48;
+    font-size:14px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #connect{
+    display: flex;
+    gap:3%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    text-decoration: none;
+  }
+  #connect i{
+    font-size:x-large;
+    text-decoration: none;
+    color: #333f48;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  }
+  #connect p{
+    font-size:14px;
+    font-weight: 300; 
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #333f48;
+  text-decoration: none;
+  }
+  #connect a:hover{
+    text-decoration: none;
+  }
+  .hey1{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+  }
+  .box-input{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #333f48;
+  text-decoration: none;
+  font-size:14px;
+  font-weight: 300;
+  
+  }
+  .hey2{
+    display: flex;
+    justify-content: space-between;
+  }
+  .hey3{
+    display: flex;
+    justify-content: space-between;
+  }
+  .hey3 hr{
+    transform: rotate(180deg);
+    margin-right: 15px;
+    margin-left: 5px;
+    text-decoration: solid;
+    font-weight: 500;
+    font-size: larger;
+    text-decoration-line: solid;
+    text-decoration-thickness:inherit;
+    /* border:thick */
+    /* border: 2px; */
+    height: 20px;
+    /* width: 4px; */
+  }
+  
+  .hey1>div>img{
+  display: flex;
+  height: 80px;
+  width: 120px;
+  }
+  .hey3+p{
+    text-align: center;
+  }
+  .image2{
+    display: flex;
+    justify-content: center;
+  }
+  .linkblue a{
+    text-decoration: underline;
+    color: #333f48;
+    font-weight: 540;
+    text-underline-offset:5px;
+    font-size:13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  @media (max-width:900px)
+  {
+    footer .content .link-boxes {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
+  }
+
+  footer {
+      align-items: center;
+      margin: auto;
+  }
+
+  .content {
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+  }
+  }
+  
+  @media (max-width: 700px){
+  footer {
+    position: relative;
+}
+
+.content .top .logo-details {
+    font-size: 26px;
+}
+
+.content .top .media-icons a {
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    line-height: 35px;
+}
+
+footer .content .link-boxes .box {
+    width: calc(100% / 3 - 10px);
+}
+
+footer .content .link-boxes .input-box {
+    width: 60%;
+}
+
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+    font-size: 12px;
+}
+  }
+  @media (max-width: 520px) {
+    footer::before {
+        top: 145px;
+    }
+
+    footer .content .top {
+        flex-direction: column;
+    }
+
+    .content .top .media-icons {
+        margin-top: 16px;
+    }
+
+    footer .content .link-boxes .box {
+        width: calc(100% / 2 - 10px);
+    }
+
+    footer .content .link-boxes .input-box {
+        width: 100%;
+    }
+  }
+        body{
+            width: 100%;
+            margin: auto;
+            color: black;
+            /* background-color:  rgb(235,236,238) */
         }
         div>img{
-            width:  35px;
-            height: 28px;
+            width:  20px;
+            height: 15px;
             margin-top: 20px;
         }
-       .sp{
+        #parent>.sp{
             display: flex;
-            gap: 15px;
+            justify-content: space-around;
         }
-        /* #parent>.rk{
-            margin-top: 25px;
+        /* .rk{
+          margin-left: 50%;
+            
         } */
         #child{
             text-align: center;
-
+            
         }
+        .space>p>img{
+            width: 35px;
+            height: 30px;
+        }
+        .space>p>p{
+            display: block;
+            margin-right: 10px;
+        }
+        
         #child>h2{
             font-size: 50px;
             color: rgb(51,63,72);
@@ -41,7 +777,7 @@
         }
         #psb{
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             padding-top: 80px; 
         }
         #fash{
@@ -67,108 +803,992 @@
         #fash>img{
             width: 500px;
         }
+        #cartprod{
+            width: 80%;
+            display: flex;
+            gap: 30px;
+            margin: auto;
+           justify-content: center;
+           /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
+           /* margin-bottom: 20px; */
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+        #cartprod>img{
+            width: 160px;
+            height: 180px;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+            padding: 0px 0px 10px 10px;
+            margin: auto;
+            
+            
+        }
+        /* #cartprod>.clas{
+         border: 2px solid;
+        } */
+        .class{
+            width: 40%;
+            margin-left: 20px;
+           
+        }
+        #rsk{
+            width: 40%;
+        }
+        .clas{
+           
+            width: 55%;
+        }
+        
+        /* .clas>h3{
+            width:60%;
+            
+        } */
+       .clas p{
+        width: 35px;
+       }
+       
+       #rsk{
+        
+        width: 50%;
+        
+       }
+       h2{
+        text-align: center;
+       }
+       /* #Offer>div>#carval{
+        border: 3px solid black;
+       } */
+        #cardval>p{
+            font-size: 40px;
+            font-weight: bold;
+        }
+       #cartval>p>span{
+        font-size: 40px;
+       }
+       #btn{
+        background-color: rgb(51,63,72);
+        color: aliceblue;
+        border: none;
+       }
+     #delbtn{
+      background-color:rgb(51,63,72);
+      color: white;
+      border: none;
+      border-radius: 3px;
+      width: 90px;
+      height: 30px;
+      margin-top: 84px;
+      margin-right: 20px;
+
+    }
+    #cardval>p{
+        text-align: center;
+    }
+    #Offer{
+
+        width: 100%;
+        height: 180px;
+        text-align: center;
+        margin: 10px 0px 10px 0px;
+       
+    }
+    #Offer>div>p{
+          font-weight: bold;
+          font-size: 25px;
+    }
+   
+   #Offer>div>button{
+    background-color:rgb(51,63,72);
+    color: white;
+    height: 35px;
+    width: 80px;
+    border: none;
+   }
+   /* proceed button */
+   #kranti>button{
+      height: 50px;
+        width: 400px;
+       
+        color: white;
+        border: none;
+        font-size: 25px;
+        background-color: rgb(51,63,72);
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+       
+       
+   }
+   #kranti>button:hover{
+      cursor: pointer;
+    
+   }
+   #kranti{
+    text-decoration: none;
+   }
+   .k>button{
+    width: 140px;
+    height: 45px;
+    background-color: rgb(51,63,72);
+    color: white;
+    margin-right: 23px;
+   }
+   #project{
+     height: 50px;
+     
+     background-color: rgb(38, 34, 34);
+   }
+   #prefer>div{
+         display: flex;
+   }
+   #preft{
+    
+    display: flex;
+    width: 90%;
+   justify-content: center;
+   gap: 50px;
+   margin: auto;
+   
+   }
+   #shu{
+   
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 30%;
+   }
+   #child{
+    
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 70%;
+    
+   }
+   #promo{
+    width: 250px;
+    height: 30px;
+   }
+   #shubham{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: -13px;
+    margin-bottom: 15px;
+    
+   }
+   #shubham>img{
+    width: 90px;
+    height: 90px;
+    margin-left: 20px;
+    margin-top: -10px;
+   }
+  #shubham>div>p{
+    
+    margin-left: 10px;
+    text-justify: distribute-all-lines;
+  }
+  #pankaj-hr{
+    width: 100%;
+    background-color:rgb(51,63,72);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+  }
+  #email{
+    width: 400px;
+    height: 40px;
+    margin-left: 20px;
+  }
+  #shubham-span1{
+    color: red;
+
+  }
+  #shubham-span2{
+   color:  rgb(24, 29, 33);
+   font-size: 15px;
+   font-weight: bold;
+  }
+  #shubham-span3{
+    text-decoration: underline;
+  }
+  #pojit{
+    width:100%;
+    height: 5px;
+    background-color: black;
+  }
+  nav+hr {
+    margin-top: 4.5%;
+}
+  
+   
+   @media only screen and (max-width: 900px) {
+        /* Medium Screen  */
+        #parent>.sp{
+            display: flex;
+            flex-direction: row;
+        }
+        #psb{
+            display: flex;
+            flex-direction: row;
+        }
+        #fash{
+            display: flex;
+            
+        }
+        #fash>div{
+            display: flex;
+        }
+        #cartprod{
+            display: flex;
+           
+        }
+        #prefer>div{
+         display: flex;
+   }
+   #preft{
+    
+    display: flex;
+   
+   
+   }
+      }
+      @media only screen and (max-width: 500px) {
+        /* Medium Screen  */
+        #parent>.sp{
+            display: flex;
+            flex-direction: column;
+        }
+        #psb{
+            display: flex;
+            flex-direction:column;
+            justify-content: space-around;
+           
+        }
+        #fash {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#fash>div {
+    display: flex;
+    gap: 20px;
+}
+#fash img {
+    width: 60%;
+    height: 60%;
+}
+#fash hr{
+    transform: rotate(180deg);
+     margin-right: 15px;
+    margin-left: 15px;
+}
         
         
-        
-        
+        #cartprod{
+            display: flex;
+           flex-direction: column;
+        }
+        #prefer>div{
+         display: flex;
+         flex-direction: column;
+   }
+   #preft{
+    display: flex;
+    flex-direction: column;
+   }
+      }
     </style>
 </head>
 <body>
+    <nav>
+        <div class="wrapper">
+          <div class="logo"><a href="index.html"><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-assets/famous-footwear-logo.svg"></a></div>
+          <input type="radio" name="slider" id="menu-btn">
+          <input type="radio" name="slider" id="close-btn">
+          <div id="combine">
+            <div id="upper">
+              <a href="#"><button><p>Find Something Famous For You</p><i class="fa-solid fa-magnifying-glass"></i></button></a>
+              <a href=""><i class="fa-solid fa-user"></i></a>
+          <a href=""><i class="fa-sharp fa-regular fa-heart"></i></a>
+          <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+          
+          <ul class="nav-links">
+            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+           
+           
+    <!-- new and know -->
+    <li>
+      <a href="#" class="desktop-item">New & Know</a>
+      <!-- <input type="checkbox" id="showMega"> -->
+      <!-- <label for="showMega" class="mobile-item">New & Know</label> -->
+      <div class="mega-box">
+        <div class="content">
+          <!-- 1st div -->
+          <div class="row">
+            <header>Spotlight On</header>
+            <ul class="mega-links">
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Eco-Conscious Styles</a></li>
+              <li><a href="#">Spring Loafers</a></li>
+            </ul>
+            <header>Shop by Occasion</header>
+            <ul class="mega-links">
+              <li><a href="#">Weddings & Events</a></li>
+              <li><a href="#">Beach Getaway</a></li>
+            </ul>
+          </div>
+          <!-- 2nd div -->
+          <div class="row">
+            <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/wk2_020823_site_ads_mega_nav_spg23_sandalshop.jpg" alt="">
+            <header>Sandal Shop</header>
+          </div>
+          <!-- 3rd div -->
+          <div class="row">
+            <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/mega_nav_spg23_wsneakershop.jpg" alt="">
+            <header>Sneaker Shop</header>
+          </div>
+          <!-- 4th div -->
+              <div class="row">
+                <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/wk2_020823_site_ads_mega_nav_spg23_activeshop.jpg" alt="">
+                <header>Active Shop</header>
+              </div>
+              <!-- 5th div -->
+              <div class="row">
+                <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/wk2_020823_site_ads_mega_nav_spg23_getaway.jpg" alt="">
+                <header>GetAway Shop</header>
+              </div>
+          </div>
+        </div>
+    
+    </li>
+    
+    
+    <!-- kids section -->
+    <li>
+      <a href="#" class="desktop-item">Kids</a>
+      <!-- <input type="checkbox" id="showMega">
+      <label for="showMega" class="mobile-item">Kids</label> -->
+      <div class="mega-box">
+        <div class="content">
+          <!-- 1st div -->
+          <div class="row">
+            <header>Shop by Size</header>
+            <ul class="mega-links">
+              <li><a href="#">Baby (0-3.5)</a></li>
+              <li><a href="#">Toddler (4-10)</a></li>
+              <li><a href="#">Little Kid (10.5-3)</a></li>
+              <li><a href="#">Big Kid (3.5-7)</a></li>     
+            </ul>
+            <header>View All Kids' Shoes</header>
+          </div>
+          <!-- 2nd div -->
+          <div class="row">
+            <header> Girls' Shoes</header>
+            <ul class="mega-links">
+              <li><a href="#">View All</a></li>
+              <li><a href="#">Bottoms</a></li>
+              <li><a href="#">Tops</a></li>
+              <li><a href="#">Boots</a></li>
+              <li><a href="#">sandals</a></li>
+              <li><a href="#">dress Shoes</a></li>
+              <li><a href="#">Mary Janes</a></li>
+              <li><a href="#">Slippers</a></li>
+            </ul>
+          </div>
+          <!-- 3rd div -->
+         
+          <div class="row">
+            <header>Boy's Shoes</header>
+           
+            <ul class="mega-links">
+              <li><a href="#">Sneakers & Athletics</a></li>
+              <li><a href="#">Boots</a></li>
+              <li><a href="#">Sandals</a></li>
+              <li><a href="#">Dress Shoes</a></li>
+              <li><a href="#">Boat Shoes</a></li>
+              <li><a href="#">Slipper</a></li>
+            </ul>
+          
+          </div>
+          <!-- 4th div -->
+    <div class="row">
+      <header>Other Ways to Shop</header>
+      <ul class="mega-links">
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Back In Stock</a></li>
+        <li><a href="#">Eco-Conscious</a></li>
+      </ul>
+    </div>
+    <!-- 5th div  -->
+    <div class="row">
+      <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/kids-tab/2023/spring/wk2_020823_site_ads_mega_nav_spg23_kids_skechers.jpg" alt="">
+      <header>Sandal Trend Shop</header>
+    </div>
+          </div>
+        </div>
+    
+    </li>
+    
+    
+    <!-- women section -->
+            <li>
+              <a href="#" class="desktop-item">Women</a>
+              <!-- <input type="checkbox" id="showMega">
+              <label for="showMega" class="mobile-item">Women</label> -->
+              <div class="mega-box">
+                <div class="content">
+                  <!-- 1st div -->
+                  <div class="row">
+                    <header>Women Shoes</header>
+                    <ul class="mega-links">
+                      <li><a href="#">View All</a></li>
+                      <li><a href="#">Sneakers & Athletics</a></li>
+                      <li><a href="#">Sandals</a></li>
+                      <li><a href="#">Heels</a></li>
+                      <li><a href="#">Loafers & Oxfords</a></li>
+                      <li><a href="#">Flats</a></li>
+                      <li><a href="#">Boots</a></li>
+                      <li><a href="#">Slippers</a></li>
+                      <li><a href="#">Work & Safety</a></li>
+                    </ul>
+                  </div>
+                  <!-- 2nd div -->
+                  <div class="row">
+                    <header>Apparel</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Tops</a></li>
+                      <li><a href="#">Bottoms</a></li>
+                    </ul>
+                    <header>Other Ways To Shop</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Sale</a></li>
+                      <li><a href="#">New Arrivals</a></li>
+                      <li><a href="#">Back In Stock</a></li>
+                      <li><a href="#">Eco-Conscious</a></li>
+                    </ul>
+                    <header>Spotlight On</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Sneaker Trend Shop</a></li>
+                      <li><a href="#">Active & Outdoor Shop</a></li>
+                      <li><a href="#">Weddings & Events</a></li>
+                      <li><a href="#">Beach Getaway Style</a></li>
+                    </ul>
+                  </div>
+                  <!-- 3rd div -->
+                  <div class="row">
+                    <header>Shop By Size</header>
+                    <div class="sizebox">
+                    <ul class="mega-links">
+                      <li><a href="#">4.5</a></li>
+                      <li><a href="#">5.0</a></li>
+                      <li><a href="#">5.5</a></li>
+                      <li><a href="#">6.0</a></li>
+                      <li><a href="#">6.5</a></li>
+                      <li><a href="#">7.0</a></li>
+                      <li><a href="#">7.5</a></li>
+                      <li><a href="#">8.0</a></li>
+                      <li><a href="#">8.5</a></li>
+                      <li><a href="#">9.0</a></li>
+                      <li><a href="#">9.5</a></li>
+                      <li><a href="#">10.0</a></li>
+                      <li><a href="#">10.5</a></li>
+                      <li><a href="#">11.0</a></li>
+                      <li><a href="#">12+</a></li>
+                    </ul>
+                  </div>
+                  </div>
+                  <!-- 4th div -->
+                      <div class="row">
+                        <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/womens-tab/2023/spring/wk2_020823_site_ads_mega_nav_spg23_sandalshop.jpg" alt="">
+                        <header>Sandal Trend Shop</header>
+                      </div>
+                  </div>
+                </div>
+            
+            </li>
+    
+    
+            <!-- men section -->
+            <li>
+                <a href="#" class="desktop-item">Men</a>
+                <!-- <input type="checkbox" id="showMega">
+                <label for="showMega" class="mobile-item">Men</label> -->
+                <div class="mega-box">
+                  <div class="content">
+                    <!-- 1st div -->
+                    <div class="row">
+                      <header>Men's Shoes</header>
+                      <ul class="mega-links">
+                        <li><a href="#">View All</a></li>
+                        <li><a href="#">Sneakers & Athletics</a></li>
+                        <li><a href="#">Sandals</a></li>
+                        <li><a href="#">Clogs & Mules</a></li>
+                        <li><a href="#">Loafers & Oxfords</a></li>
+                        <li><a href="#">Flats</a></li>
+                        <li><a href="#">Boots</a></li>
+                        <li><a href="#">Slippers</a></li>
+                        <li><a href="#">Work & Safety</a></li>
+                      </ul>
+                    </div>
+      
+                    <!-- 2nd div -->
+                    <div class="row">
+                      <header>Other Ways To Shop</header>
+                      <ul class="mega-links">
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Back In Stock</a></li>
+                        <li><a href="#">Eco-Conscious</a></li>
+                      </ul>
+                      <header>Spotlight On</header>
+                      <ul class="mega-links">
+                        <li><a href="#">Sneaker Trend Shop</a></li>
+                        <li><a href="#">Active & Outdoor Shop</a></li>
+                        <li><a href="#">Weddings & Events</a></li>
+                        <li><a href="#">Beach Getaway Style</a></li>
+                      </ul>
+                    </div>
+                    <!-- 3rd div -->
+                    <div class="row">
+                      <header>Shop By Size</header>
+                      <div class="sizebox">
+                      <ul class="mega-links">
+                        <li><a href="#">4.5</a></li>
+                        <li><a href="#">5.0</a></li>
+                        <li><a href="#">5.5</a></li>
+                        <li><a href="#">6.0</a></li>
+                        <li><a href="#">6.5</a></li>
+                        <li><a href="#">7.0</a></li>
+                        <li><a href="#">7.5</a></li>
+                        <li><a href="#">8.0</a></li>
+                        <li><a href="#">8.5</a></li>
+                        <li><a href="#">9.0</a></li>
+                        <li><a href="#">9.5</a></li>
+                        <li><a href="#">10.0</a></li>
+                        <li><a href="#">10.5</a></li>
+                        <li><a href="#">11.0</a></li>
+                        <li><a href="#">12+</a></li>
+                      </ul>
+                    </div>
+                      <ul class="mega-links">
+                        <li><a href="#">Wide Width</a></li>
+                        <li><a href="#">Extra Wide Width</a></li>
+                      </ul>
+                    </div>
+                    <!-- 4th div -->
+                        <div class="row">
+                          <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/mens-tab/2023/spring/wk2_020823_site_ads_mega_nav_spg23_mens_nike.jpg" alt="">
+                          <header>SHOP MEN's NIKE</header>
+                        </div>
+                    </div>
+                  </div>
+                <!-- </div> -->
+              </li>
+    
+              <!-- brands -->
+    
+              <li>
+                <a href="#" class="desktop-item">Brands</a>
+                <!-- <input type="checkbox" id="showMega">
+                <label for="showMega" class="mobile-item">Brands</label> -->
+                <div class="mega-box">
+                  <div class="content" id="content">
+                    <!-- 1st div -->
+                    <div class="row">
+                      <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/nike.svg" alt=""></a>
+                   
+                    </div>
+                    <!-- 2nd div -->
+                    <div class="row">
+                      <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/vans.svg" alt=""></a>
+                     
+                    </div>
+                    <!-- 3rd div -->
+                    <div class="row">
+                      <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/adidas_update.svg" alt=""></a>
+                    
+                    </div>
+                    <!-- 4th div -->
+                        <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/converse.svg" alt=""></a>                
+                        </div>
+                        <!-- 5th div -->
+                        <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/skechers.svg" alt=""></a>
+                          
+                        </div>
+                        <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/crocs.svg" alt=""></a>
+                         
+                        </div>
+                        <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/birkenstock.svg" alt=""></a>
+                         
+                        </div>
+                        <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/newbalance.svg" alt=""></a>
+                         
+                        </div>
+                        <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/puma.svg" alt=""></a>
+                         
+                        </div>
+                        <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/asics.svg" alt=""></a>
+                         
+                        </div>
+                        <!-- <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/dr-martens.svg" alt=""></a>
+                         
+                        </div> -->
+                        <!-- <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/drscholls.svg" alt=""></a>
+                         
+                        </div>
+                        <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/ryka.png" alt=""></a>                 
+                        </div>
+                        <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/naturalizer.svg" alt=""></a>
+                        </div>
+                        <div class="row">
+                          <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/lifestride_logo_meganav_2.svg" alt=""></a>
+                         
+                        </div> -->
+                    </div>
+                  </div>
+              
+              </li>
+    
+              <!-- accesooroes -->
+    
+              <li>
+                <a href="#" class="desktop-item">Accessories</a>
+                <!-- <input type="checkbox" id="showMega">
+                <label for="showMega" class="mobile-item">Accessories</label> -->
+                <div class="mega-box">
+                  <div class="content">
+                    <!-- 1st div -->
+                    <div class="row">
+                      <header>Accessories</header>
+                      <ul class="mega-links">
+                        <li><a href="#">View All</a></li>
+                        <li><a href="#">Socks</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Lanyards</a></li>   
+                        <li><a href="">Shoe Charms</a></li>  
+                        <li><a href="">Water Bottels</a></li> 
+                        <li><a href="">Hair Accessories</a></li> 
+                        <li><a href="">Slippers</a></li> 
+                        <li><a href="">Pins</a></li> 
+                      </ul>
+                    </div>
+                    <!-- 2nd div -->
+                    <div class="row">
+                      <header>Bags</header>
+                      <ul class="mega-links">
+                        <li><a href="#">View All</a></li>
+                        <li><a href="#">Backpacks</a></li>
+                        <li><a href="#">Lunch Boxes and Bags</a></li>
+                        <li><a href="#">Drawstring Bags</a></li>
+                        <li><a href="#">Mini Bags</a></li>
+                        <li><a href="#">dress Shoes</a></li>
+                        <li><a href="#">Mary Janes</a></li>
+                        <li><a href="#">Fanny Packs</a></li>
+                      </ul>
+                    </div>
+                    <!-- 3rd div -->
+                   
+                    <div class="row">
+                      <header>Slippers</header>                
+                      <ul class="mega-links">
+                        <li><a href="#">All Slippers</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Kids</a></li>
+                      </ul>
+                    
+                    </div>
+                    <!-- 4th div -->
+              <div class="row">
+                <header>Other Ways to Shop</header>
+                <ul class="mega-links">
+                  <li><a href="#">New Arrivals</a></li>
+                  <li><a href="#">Back In Stock</a></li>
+                  <li><a href="#">Eco-Conscious</a></li>
+                </ul>
+              </div>
+                    </div>
+                  </div>
+              
+              </li>
+    
+            <!-- sale -->
+            <li>
+              <a href="#" class="desktop-item">Sale</a>
+              <!-- <input type="checkbox" id="showMega">
+              <label for="showMega" class="mobile-item">Sale</label> -->
+              <div class="mega-box">
+                <div class="content">
+                  <!-- 1st div -->
+                  <div class="row">
+                    <header>Sale</header>
+                    <ul class="mega-links">
+                      <li><a href="#">View All</a></li>
+                      <li><a href="#">Women</a></li>
+                      <li><a href="#">Men</a></li>
+                      <li><a href="#">Girls</a></li>
+                      <li><a href="#">Kids</a></li>
+                      <li><a href="#">Boys</a></li>
+                      <li><a href="#">Clearance</a></li>
+                    </ul>
+                  </div>
+                  <!-- 2nd div -->
+                  <div class="row">
+                    <header>Shop By Brand</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Nike</a></li>
+                      <li><a href="#">Adidas</a></li>
+                      <li><a href="">Converse</a></li>
+                      <li><a href="">Vans</a></li>
+                      <li><a href="">Birkenstock</a></li>
+                      <li><a href="">Crocs</a></li>
+                      <li><a href="">Timberland</a></li>
+                      <li><a href="">Dr Martens</a></li>
+                    </ul>
+                    <header>Shop By Price Point</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Under $75</a></li>
+                      <li><a href="#">Under $50</a></li>
+                      <li><a href="#">Under $30</a></li>       
+                    </ul>
+                  </div>
+                  <!-- 3rd div -->     
+                      <div class="row">
+                        <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/sale/2023/spring/clearance/spg23_meganav_clearance.jpg" alt="">
+                        <header>SHOP CLEARANCE</header>
+                      </div>
+                  </div>
+                </div>
+            
+            </li>
+    
+            <!-- Offers -->
+            <a href="#" class="desktop-item">Your Offers</a>
+          </ul>
+          </div>
+          <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+      </nav> 
+       <hr>
     <div id="parent">
+        
         <div class="sp">
             
-        <img src="https://media.istockphoto.com/id/1148705812/vector/location-icon-vector-pin-sign-isolated-on-white-background-navigation-map-gps-direction.jpg?s=612x612&w=0&k=20&c=lqEIzW3QedZfytsX30NoBJbHxZZbWnlLsvEiwOSbaow=" alt=""> 
-        <div class="space">
-            <p>Guam Premier Outlets  </p>
-            <p>Open today 10:00am-9:00pm</p>
-        </div>
         
+        <div class="space">
+            <p> Guam Premier Outlets </p>
+            <p>Open today 10:00am-9:00pm</p>
+            
         </div>
         <div class="rk">
             <p>Free Shipping for Rewards or Orders $75+</p>
-            <p>Sign In / Join Now</p>
+            <p style="text-decoration: underline;">Sign In / Join Now</p>
         </div>
     </div>
-    <h2>Your Cart <span id="per">:-0</span>  Items</h2>
+    </div>
+    <div id="pankaj-hr" >
+     <h4>$10 off $50+, $15 off $75+, $20 off $100+ with code TIME2SAVE</h4>
+     <h4>Exclusions apply.</h4>
+    </div>
+       
+   
+    <h2>Your Cart:- <span id="per">0</span>  Items</h2>
+     <div id="preft">
       <div id="child">
            
-           <p>Have an account ? Sign in to see ur cart</p>
-           <button class="ps">CONTINUE SHOOPING</button>
       </div>
+      <div id="shu">
+        <div id="Offer">
+            <div>
+                <p>Apply Promo Code</p>
+                <input type="text" id="promo">
+                <button id="poi">Check</button>
+            </div> <br>
+        </div>
+          <div id="cardval">
+            <p>Total Price:-$ <span id="pr"> </span></p>
+          </div>
+            
+          
+          <div id="shubham">
+              <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/rewards-images/plcc-double.png?w=+1440&hash=68621878391AE4CD59361AC547BEFA9F" alt="">
+              <div>
+                <p><span id="shubham-span1">Enjoy $10 OFF Today*</span>  on your first purchase with the <span id="shubham-span2">FAMOUSLY YOU REWARDS® Credit Card</span>  at time of account opening. <span id="shubham-span3">Learn More</span> </p>
+              </div>
+          </div>
+          <div>
+            <a id="kranti" href="address.html"> <button>Checkout</button> </a>
+          </div>
+          <div id="pankaj-hr"></div>
+      </div>
+      
+    
+      
+    </div>
+      <span id="ok"> </span>
       <div id="psb">
            <p >Sign up for special offers & trend updates</p>
            <div class="k">
             <input type="text" name="email" id="email" placeholder="Email">
-            <button>Sign Up</button>
+            <button >Sign Up</button>
            </div>
            
       </div>
-      <hr >
+      <hr id="pojit">
       <div id="fash">
         <div >
             <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/rewards-images/rewards-refresh-2022/secondary-footer/free_shipping.svg" alt="box">
-        
         <div >
             <h4>Free Shipping for Members</h4>
             <p>Plus, return your purchase to any store, at any time.</p>
         </div>
         </div>
-        
-        
+        <hr/>
         <div >
             <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/footer/gift-card.svg" alt="box">
-        
         <div>
             <h4>Famous Gift Cards</h4>
             <p>Fits every time! Physical card or instant eGift Card.</p>
         </div>
         </div>
+        <hr/>
         <div>
             <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/footer/ff-pickup.svg" alt="box">
-        
         <div>
             <h4>Famously Fast Pickup</h4>
             <p>Order online, pick up in store or at the curb. Plus, members earn a bonus reward!</p>
         </div>
         </div>
+        <hr/>
         <div>
             <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/footer/zip.svg" alt="box">
-        
         <div>
             <h4>Pay Your Way</h4>
             <p>Enjoy Zip, the Famously YOU Rewards® Credit Card and more.</p>
+        </div> 
         </div>
-        </div>
-
-      </div>
-      <hr style="color:brown">
+       </div>
+           
       
-
+      <footer>
+        <div class="content">
+          <div id="connect">
+            <!-- upper part -->
+             <p>CONNECT WITH US</p>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+          <div class="link-boxes">
+           
+            <ul class="box">
+              <li class="link_name">STORES</li>
+              <li><a href="#">Famously Fast Pickup</a></li>
+              <li><a href="#">Find A Store</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">FAMOUSLY YOU</li>
+              <li><a href="#">Sign In / Join Now</a></li>
+              <li><a href="#">Learn More</a></li>
+              <li><a href="#">Credit Card</a></li>
+              <li><a href="#">Mobile App</a></li>
+              <li><a href="#">Rewards Terms</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">HELP</li>
+              <li><a href="#">FAQ / Contact Us</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+              <li><a href="#">Exclusions</a></li>
+              <li><a href="#">Track My Order</a></li>
+              <li><a href="#">Gift Cards</a></li>
+              <li><a href="#">Shoe Size Charts</a></li>
+              <li><a href="#">Zip</a></li>
+              <li><a href="#">Unsubscribe from Email</a></li>
+              <li><a href="#">Accessibility</a></li>
+              <li><a href="#">Do Not Sell or Share My Personal Information</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name"> ABOUT US</li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Ticket to Dream</a></li>
+              <li><a href="#">Site Map</a></li>
+              <li><a href="#">Eco-Conscious</a></li>
+            </ul>
+            <ul class="box-input">
+                
+              <div class="hey1">
+                <div>
+                  <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/rewards-images/plcc-double.png?w=+1440&hash=68621878391AE4CD59361AC547BEFA9F" alt="">
+                </div>
+                <div class="hey1-sub">
+                  <p>FAMOUSLY YOU REWARDS®</p>
+                  <p>Credit Card</p>
+                </div>
+              </div>
+              <div class="hey2">
+                <p>Learn More & Apply</p>
+                <p>Manage Card</p>
+              </div>
+              <div class="hey3">
+                <div>Privacy Policy</div>
+                <hr/>
+                <div>Terms & Conditions</div>
+                <hr/>
+                <div> Supply Chain Act</div>
+              </div>
+              <p>© 2023 Caleres, Inc.</p>
+              <div class="image2">
+              <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-assets/accessibility-icon.svg" alt="">
+              </div>   
+            </ul>
+          </div>
+        </div>
+        <p class="prep">Yes, I would like to receive emails with trends, updates & special offers a few times a week. By providing my information, I am certifying that I am at least 18 years old. Note: we collect and use the information you provide in accordance with our <span class="linkblue"><a href="#">Privacy Policy</a></span>.</p>
+      </footer>  
+      
+ 
     
 </body>
 </html>
 <script>
-  var cart=JSON.parse(localStorage.getItem("cartProducts")) || [];
-  var ind=document.querySelector("#child").value;
-if(cart.length==0){
-     document.getElementById(parent).value;
+var cartAr=JSON.parse(localStorage.getItem("cartProducts")) || [];
+
+ 
+if(cartAr===0){
+     document.querySelector("#child").value;
 }else{
-    displayCart(cart);
-    updateCount(cart);
+    
+    displayCart(cartAr);
+    updateCount(cartAr);
+    caltotal(cartAr)
+    
     
     
 }
-function deleteD(ind){
-          
-}
 
-function displayCart(cart){
-
-cart.map(function(elem){
-       var div =document.createElement("div");
+function displayCart(cartAr){
+    document.querySelector("#child").textContent="";
+    console.log(cartAr);
+       cartAr.map(function(elem){
+       var div=document.createElement("div");
        div.setAttribute("id","cartprod");
        var image=document.createElement("img");
-       image.setAttribute("src",elem.image_url);
+       image.setAttribute("src",elem.img_u2);
        image.setAttribute("alt",elem.name);
        
        var divp=document.createElement("div");
@@ -178,29 +1798,30 @@ cart.map(function(elem){
        h3.textContent=elem.name;
 
        var p=document.createElement("p");
-       p.textContent="width";
+       p.textContent="Brand:"+elem.brand;
 
        var pa=document.createElement("p");
-       pa.textContent="width";
-  
+       pa.textContent="Width"+":";
+
        var par=document.createElement("p");
-       par.textContent="width";
-       
-       var h3s=document.createElement("td");
-       h3s.textContent="ONLY few Stock Left!";
+       par.textContent="Color"+":";
 
        var diva=document.createElement("div");
+       diva.setAttribute("id","rsk");
        
        var price=document.createElement("p");
-       price.textContent=elem.price;
+       price.textContent="$"+elem.price;
 
        var quantity=document.createElement("h2");
-         quantity.textContent="Quantity";
+         quantity.textContent="Qty";
 
          var span=document.createElement("span");
-         span.textContent="1";
+         span.textContent=" "+"1";
+
+        
 
        var increase=document.createElement("button");
+       increase.setAttribute("id","btn")
           increase.textContent="+";
           increase.onclick=function(){
             increaseval(span.textContent);
@@ -209,11 +1830,15 @@ cart.map(function(elem){
               var pr=parseInt(value)+1;
               var va=pr*(elem.price);
               span.textContent=pr;
-              finalPrice.textContent="₹"+va;
-          }
-          
+              price.textContent="$"+va;
+              var a= document.getElementById("pr").textContent;
+             var last=parseInt(a)+parseInt(elem.price);
+             document.getElementById("pr").textContent=last;
 
+          }
+         
           var decrease=document.createElement("button");
+          decrease.setAttribute("id","btn")
           decrease.textContent="-";
           decrease.onclick=function(){
             decreaseval(span.textContent);
@@ -225,25 +1850,81 @@ cart.map(function(elem){
             var pr=parseInt(value)-1;
             var va=pr*elem.price
             span.textContent=pr;
-              finalPrice.textContent="₹"+va;
+              price.textContent="$"+va;
+          var a= document.getElementById("pr").textContent;
+       var last=parseInt(a)-parseInt(elem.price);
+        document.getElementById("pr").textContent=last;
+        }
+        
             } 
-          }
+          
 
+          var tree=document.createElement("div");
+         tree.setAttribute("id","pers");
+
+         var del=document.createElement("button");
+         del.setAttribute("id","delbtn")
+         del.textContent="Remove";
+         del.addEventListener("click",function(){
+           delrow(elem);
+      });
+      
         quantity.append(span);
         diva.append(price,increase,quantity,decrease);
-        divp.append(h3,p,pa,par,h3s);
-        div.append(image,divp,diva);
+        divp.append(h3,p,pa,par);
+        tree.append(del);
+       
+        div.append(image,divp,diva,tree);
         document.querySelector("#child").append(div);
 
     
 });
 
 }
-function updateCount(cart){
-    document.getElementById("per").textContent=cart.length;
 
-    
+// console.log(cart);
+function delrow(elem){
+      console.log(typeof cart);
+       cartAr.splice(elem,1);
+        // console.log(p);
+        localStorage.setItem("cartProducts",JSON.stringify(cartAr))
+        displayCart(cartAr);
+        caltotal(cartAr);
+        updateCount(cartAr);
+    }
+var pert=localStorage.getItem("cartper")
+function updateCount(cartAr){
+    document.getElementById("per").textContent=cartAr.length;
+    localStorage.setItem("cartper",cartAr.length);
 }
+
+ var cart=localStorage.getItem("cartp")
+function caltotal(){
+    var carval=0;
+    for(var i=0;i<cartAr.length;i++){
+        carval+=parseInt(cartAr[i].price);
+         
+    }
+    document.getElementById("pr").textContent=carval;
+   localStorage.setItem("cartp",(carval) );
+   }
+   document.querySelector("#poi").addEventListener("click", checkpu);
+   function checkpu(){
+    // event.preventDefault();
+        var ch = document.getElementById("promo").value;
+        console.log(ch);
+        if(ch =="masai30"){
+            var temp = document.createElement("p");
+            temp.setAttribute("class","krp");
+             temp = "Hurray!... You got 30% off";
+            console.log(temp);
+            document.getElementById("Offer").append(temp);
+            var t = parseInt(document.getElementById("pr").textContent);
+            var change = (t*3)/10;
+            document.getElementById("pr").textContent = t - change;
+        }
+    }
+    
    
 </script>
-</script>
+

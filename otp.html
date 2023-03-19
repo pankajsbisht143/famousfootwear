@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./otp.css">
+    
+    <title>OTP</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="login">
+       
+        <div id="logo">
+            <span id ="cross" onclick="closepopUp()">&times;</span>
+        </div>
+          
+        <form  action="./index.html" id="form-otp">          
+            <div id="newlog">
+                <div class="Container">
+                    <h3>Continue using Phone</h3>
+                    <div class="UserInput">
+                        <Input Type="Text" Id='Ist' Maxlength="1"/>
+                            <Input Type="Text" Id="Sec" Maxlength="1" disabled/>
+                            <Input Type="Text" Id="Third" Maxlength="1" disabled/>
+                            <Input Type="Text" Id="Fourth" Maxlength="1" disabled/>
+                    </div>
+                    <div class="change">
+                        <p id="changeTime">Resend OTP <span id="timeStamp"></span></p>
+                    </div>
+                    
+                </div>
+                <button id="continueBtn" onclick="showpopUp()">Continue</button>
+                <div>
+                    <p style="font-size: 10px;">By clicking continue, you agree with our <span> Privacy Policy</span></p>
+                </div>
+            </div>
+        </form>
+    </div>  
+
+    <div class="success">
+        <div>
+            <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png?dim=256x0" alt="">
+           <h1 id="htag">Login SuccessFully!</h1> 
+           <span id ="danger" onclick="closepopup()">&times;</span>
+        </div>
+    </div>
+</body>
+</html>
+<script src="opt.js"></script>
+
+
+
+

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>.header {
+        border-bottom: 1px solid #F5F5F6;
+        overflow: hidden;
+        padding: 10px 20px;
+    }
+    .mLogo {
+        width: 80px;
+        height: 50px;
+        float: left;
+        margin-left: 10px;
+    }
+    .headerCenter {
+        float: left;
+        line-height: 45px;
+        margin-left: 400px;
+    }
+    .headerRight {
+        float: right;
+        line-height: 12px;
+        margin-right: 10px;
+    }
+    a, h4 {
+        text-decoration: none;
+        font-family: Whitney,Helvetica,Arial,sans-serif!important;
+        color: #696B79;
+        word-spacing: 5px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        font-size:small;
+    }
+    .image2 {
+        width: 30px;
+        margin-top: 10px;
+    }
+    h4 {
+        margin-left: 5px;
+    }
+    .footer {
+        border-top: 1px solid #F5F5F6;
+        margin: 0 0 10px 0;
+    }
+    .footer .container3 {
+        display: inline-block;
+    }
+    .images {
+        width: 70px;
+        margin-top: 10px;
+        height: 40px;
+    }
+    .container3 {
+        margin-left: 140px;
+    }
+    .contact {
+        float: right;
+        font-size: 14px;
+        padding-top: 20px;
+        
+    }
+    #more {
+        display: none;
+    }
+    #myBtn {
+        color: #ff3f6c;
+        background-color: white;
+        border: none;
+    } 
+    .container4 {
+        border: 1px solid #f2f2f5;
+        width: 53%;
+        font-family: Whitney,Helvetica,Arial,sans-serif!important;
+        text-rendering: optimizeLegibility;
+        font-size: 13px;
+        margin: 30px 20px 20px 80px;
+        padding-left: 10px;
+        color: #696B79;
+        background-color: white;
+    }
+    .parent {
+        display: grid;
+        grid-template: "a f f"
+                       "b f f"
+                       "c f f"
+                       "d f f"
+                       "e f f";
+    }
+    #child1 {
+        grid-area: a;
+    }
+    #child2 {
+        grid-area: b;
+    }
+    #child3 {
+        grid-area: c;
+    }
+    #child4 {
+        grid-area: d;
+    }
+    #child5 {
+        grid-area: e;
+    }
+    #child6 {
+        grid-area: f;
+    }
+    .btn {
+        border-bottom: 1px  #eaeaec !important;
+        border: none;
+        background-color:rgb(51,63,72);
+        width: 90%;
+        height: 60px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+        color: white;
+        font-size: 14px;
+        align-items: center;
+        font-weight: 600;
+      }
+      .btn:hover {
+          background: white;
+        border-left: 5px solid #219dab;
+        }
+        #formClass, #formClass1{
+            width: 70%;
+            height: 40px;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            border: 2px solid #F5F5F6; 
+        }
+    #valid {
+        width: 40%;
+        height: 40px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        border: 2px solid#F5F5F6;
+    }
+    #cvv {
+        width: 24%;
+        height: 40px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        padding-right: 25px;
+        border-radius: 3px;
+        border: 2px solid black;
+    }
+    #myBtn2 {
+        border: none;
+        background-color:rgb(51,63,72);
+        color: white;
+        width: 76%;
+        height: 40px;
+        margin-top: 20px;
+        border-radius: 3px;
+    }
+    .grid {
+        border: 1px solid #F5F5F6;
+    }
+    #selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* #selection select{
+    padding: 10px 20px;
+} */
+    </style>
+</head>
+<body>
+    <div class = "header">
+        <img class = "mLogo" src = "https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-assets/famous-footwear-logo.svg"/>
+        <div class = "headerCenter">
+            <a href = "C:\Users\HP\Desktop\project\bag.html">BAG --------</a>
+            <a href = "C:\Users\HP\Desktop\project\address.html">ADDRESS --------</a>
+            <a href = "C:\Users\HP\Desktop\project\payment.html">PAYMENT</a>    
+        </div>
+        <div class = "headerRight">
+            <img class = "image2" src = "https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"/>
+            <h4 style = "float: right;">100% SECURE</h4>
+        </div>
+    </div>
+    <div>
+        <div class = "container4">
+            <h4>Bank Offer</h4>
+            <p>
+                . 10% Instant Discount on RBL Bank Credit and Debit Cards on a minimum spend of 2500. TCA<br><br>
+                <span id = "tca">...</span><span id = "more">
+                . 10% Instant Discount with Standard Chartered Credit and Debit Cards on a minimum spend of 2500. TCA<br><br>
+                . 5% Unlimited Cashback on Flipkart Axis Bank Ctedit Card TCA<br><br>
+                . 10% Cashback upto Rs 250 on a minimum spend of Rs 1000 with PayZapp TCA<br><br>
+                . Upto Rs 500 Cashback on Mobikwik wallet transaction of min Rs 999. Use code MBK500 on mobikwik TCA<br><br>
+                . Flat Rs 200 Cashback on first Airtel Payments Bank transcation on myntra on a min spend of Rs 2000 TCA</span>
+            </p>
+            <button onclick="showMore()" id="myBtn">Show More</button>
+        </div>
+        <div class = "grid">
+            <div class = "container4">
+                <h3>Choose Payment Method</h3>
+                <div class = "parent">
+                    <button id = "child1" class = "btn">CREDIT/DEBIT CARD</button>
+                    <button id = "child2" class = "btn">NET BANKING</button>
+                    <button id = "child3" class = "btn">PAYTM/PAYZAPP WALLET</button>
+                    <button id = "child4" class = "btn">UPI</button>
+                    <button id = "child5" class = "btn">CASH ON DELIVERY</button>
+                    <div id = "child6">
+                        <h4>CREDIT/DEBIT CARD</h4>
+                        <form id = "myForm">
+                            <input id = "formClass" type = "number" placeholder="Card Number"><br>
+                            <input id = "formClass1" type="text" placeholder="Name On Card"/><br>
+                            <div id="valid">
+                                <div class="date">
+                                    <select name="months" id="months">
+                                        <option value="Jan">Jan</option>
+                                        <option value="Feb">Feb</option>
+                                        <option value="Mar">Mar</option>
+                                        <option value="Apr">Apr</option>
+                                        <option value="May">May</option>
+                                        <option value="Jun">Jun</option>
+                                        <option value="Jul">Jul</option>
+                                        <option value="Aug">Aug</option>
+                                        <option value="Sep">Sep</option>
+                                        <option value="Oct">Oct</option>
+                                        <option value="Nov">Nov</option>
+                                        <option value="Dec">Dec</option>
+                                      </select>
+                                      <select name="years" id="years">
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                      </select>
+                                     
+                                
+                            <input id = "cvv" type="password" placeholder="CVV"/>
+                        </div>
+                    </div>
+                        </form>
+                            <input type="checkbox" id = "checkBox"/>
+                            <label for="checkBox" style = "font-size: 14px; margin-left: 8px;">Save this card for faster payment</label>
+                            <button id = "myBtn2" onclick="successfulPayment()">PAY NOW</button>
+                    </div>
+                </div>
+            </div> 
+        </div>       
+                <div class = "footer"> 
+                    <div class = "container3">
+                        <img  class = "images" src = "https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png"/>
+                        <img class = "images" src = "https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png"/>
+                        <img class = "images" src = "https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png"/>
+                        <img class = "images" src = "https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png"/>
+                        <img class = "images" src = "https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png"/>
+                        <img class = "images" src = "https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png"/>
+                        <img class = "images" src = "https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png"/>
+                        <img class = "images" src = "https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png"/>
+                        <img class = "images" src = "https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png"/>
+                        <img class = "images" src = "https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png"/>
+
+                    </div>
+                    
+                        <a class = "contact" href= ""><span>Need Help? Contact Us</span></a>
+                    
+
+                </div>
+</body>
+</html>
+<script>
+function showMore() {
+    var dots = document.getElementById("tca");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Show more";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Show less";
+      moreText.style.display = "inline";
+    }
+  }
+
+  function successfulPayment() {
+    const form = document.getElementById("myForm");
+
+    const cardNumber = form.formClass.value;
+    const name = form.formClass1.value;
+    const valid = form.valid.value;
+    const cvv = form.cvv.value;
+
+
+    let cardDetails = {
+      cardNumber,
+      name,
+      valid,
+      cvv
+        
+    };
+    for(k in  cardDetails) {
+        if(cardDetails[k].length == 0) {
+            alert("Please filled all feild")
+            return;
+        }
+    }
+    setTimeout(function(){ 
+      window.location.href = "otp.html"; 
+    }, 3000);
+    
+    
+  }
+  </script>
