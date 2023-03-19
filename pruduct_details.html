@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <Style>
+        #main{
+            display: flex;
+            margin:0px 10%;
+            gap:55px;
+
+        }
+        #prod_img{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap:30px;
+            box-shadow: rgba(133, 12, 12, 0.16) 0px 1px 4px; 
+        }
+        #prod_img div img
+        {
+            width: 100%;
+                
+        }
+
+        #prod_img div img:hover
+        {
+            transform: scale(1.1);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+        }
+        *
+        {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* word-spacing: 8px; */
+            /* color:rgb(85, 82, 82); */
+            /* line-height:35px ; */
+        }
+        #prod_det{
+            width: 70%;
+            padding: 20px;
+        }
+        #prod_det:hover{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+        }
+        .rate{
+            margin-bottom: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 20px;
+        }
+        .rate img{
+            width:120px;
+            margin-top: -60px;
+            margin-bottom: 10px;
+        }
+        .rate p{
+            margin-top: -50px;
+        }
+        .priceBox{
+            display: flex;
+            gap:100px;
+        }
+        .priceBox h3+h3{
+            text-decoration: line-through;
+            color: rgb(139, 137, 137);
+            
+        }
+        .payimg{
+            width: 50px;
+        }
+        .payimg  img{
+            width: 100%;
+        }
+
+        .pay{
+            display: flex;
+            align-items: center;
+            margin-top: -35px;
+        }
+        h5{
+            margin-top: -15px;
+        }
+
+        #details{
+            margin: 70px 10%;
+            width:60%;
+            padding: 25px;
+        }
+        #details:hover
+        {
+            box-shadow: rgba(133, 12, 12, 0.16) 0px 1px 4px; 
+        }
+        .size{
+            display: grid;
+            grid-template-columns: repeat(5 ,1fr);
+            gap:25px;
+            margin-top: -10px;
+            margin-bottom: 40px;
+        }
+        .size button{
+            height: 40px;
+            text-align: center;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+        }
+        .size button:hover{
+            background-color: black;
+            color: white;
+        }
+        .size button:focus {
+        background-color: black;
+        color: white;
+        }
+
+        .btnW{
+            background-color: black;
+            color: white;
+            padding: 5px;
+            width: 50%;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .inp{
+            display: flex;
+            margin-bottom: -30px;
+        }
+        .inp input[type=radio] {
+             /* border: 0px; */
+            width: 10%; 
+            /* height: 2em; */
+            accent-color: rgb(55, 52, 52);
+        }
+        .par{
+            line-height: 20px;
+            margin-left: 40px;
+
+        }
+        .inpS{
+            display: flex;
+            /* margin-bottom: -30px; */
+        }
+        .inpS input[type=radio] {
+             /* border: 0px; */
+            width: 10%; 
+            /* height: 2em; */
+            accent-color: rgb(55, 52, 52);
+        }
+        .parS{
+            line-height: 20px;
+            margin-left: 40px;
+            margin-top: -15px;
+            margin-bottom: 0px;
+
+        }
+        .btnn,.btnn1
+        {
+            color: white;
+            background-color: black;
+            padding: 8px;
+            font-size: 20px;
+            cursor: pointer;
+            width: 75%;
+            margin-top: 15px;
+        }
+        .btnn:hover,.btnn1:hover
+        {
+            transform: scale(1.1);
+        }
+        /* .btnn1
+        {
+            color: white;
+            background-color: black;
+            padding: 8px;
+            font-size: 20px;
+            cursor: pointer;
+            width: 75%;
+            margin:40px 0px;
+        } */
+         
+
+        .mast{
+           height: 350px;
+        }
+
+        .mast:hover
+        {
+            transform: scale(1.1);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+        }
+
+        /* image  section */
+
+        #product
+        {
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 45px;
+            margin: 0px 10%;
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;  */
+        }
+
+
+
+        .outer
+        {
+            position: relative;
+            width:100%;
+        }
+        .outer img,.inner img
+        {
+            width: 100% ;
+        }
+        .inner
+        {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .outer:hover .inner
+        {
+            display: block;
+        }
+
+
+        .i
+        {
+            align-items: right;
+            text-align: right;
+            margin-bottom: 0px;
+            margin-right: 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        /* name section */
+
+
+        .para
+        {
+            text-align: center;
+            margin-top: -25px;
+            
+        }
+        .para img
+        {
+            width: 40%;
+           height: auto;
+            margin-top: -10px;
+        }
+
+
+        .box1
+        {
+            display: flex;
+            justify-content: space-around;
+            margin: -20px;
+        }
+        .box1 p+p
+        {
+            text-decoration: line-through;
+
+        }
+
+        .sizeBo{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 20px;
+
+        }
+        .TpriceBox{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 20px;
+            margin-bottom: 15px;
+
+        }
+        .width{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 20px;
+            margin: 15px 0px;
+
+        }
+        .btns{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 20px;
+
+        }
+        .Oinp{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 20px;
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+        
+footer{
+    /* position: fixed; */
+    background:#f0f0f0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: none;
+    text-decoration: none;
+    line-height: 20px;
+    border-top:5px solid #d50032;
+   
+     
+    
+   
+  }
+  
+  footer .content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 40px 40px 40px;
+  }
+  
+    
+  
+  footer .content .link-boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 5 - 10px);
+  }
+  .content .link-boxes .box .link_name{
+    color:#333f48;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .content .link-boxes .box li{
+    margin: 6px 0;
+    list-style: none;
+  }
+  .content .link-boxes .box li a{
+    
+    color: black;
+    
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+    font-size:14px;
+  font-weight: 300;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .content .link-boxes .box li a:hover{
+    opacity: 1;
+    text-decoration: underline;
+  }
+  .content .link-boxes .input-box{
+    margin-right: 55px;
+  }
+  .link-boxes .input-box input{
+    height: 40px;
+    width: calc(100% + 55px);
+    outline: none;
+    border: 2px solid #AFAFB6;
+    background: #140B5C;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  .link-boxes .input-box input::placeholder{
+    color: #AFAFB6;
+    font-size: 16px;
+  }
+  .link-boxes .input-box input[type="button"]{
+    background: #fff;
+    color: #140B5C;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 4px 0;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .input-box input[type="button"]:hover{
+    opacity: 1;
+  }
+  footer .bottom-details{
+    width: 100%;
+    background: #0F0844;
+  }
+  footer .bottom-details .bottom_text{
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+  /* .bottom-details .bottom_text a:hover{
+    opacity: 1;
+    text-decoration: underline;
+  }
+  .bottom-details .bottom_text a{
+    margin-right: 10px;
+  } */
+  .prep{
+    width: 80%;
+    margin: auto;
+    color: #333f48;
+    font-size:14px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #connect{
+    display: flex;
+    gap:3%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    text-decoration: none;
+  }
+  #connect i{
+    font-size:x-large;
+    text-decoration: none;
+    color: #333f48;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  }
+  #connect p{
+    font-size:14px;
+    font-weight: 300; 
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #333f48;
+  text-decoration: none;
+  }
+  #connect a:hover{
+    text-decoration: none;
+  }
+  .hey1{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+  }
+  .box-input{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #333f48;
+  text-decoration: none;
+  font-size:14px;
+  font-weight: 300;
+  
+  }
+  .hey2{
+    display: flex;
+    justify-content: space-between;
+  }
+  .hey3{
+    display: flex;
+    justify-content: space-between;
+  }
+  .hey3 hr{
+    transform: rotate(180deg);
+    margin-right: 15px;
+    margin-left: 5px;
+    text-decoration: solid;
+    font-weight: 500;
+    font-size: larger;
+    text-decoration-line: solid;
+    text-decoration-thickness:inherit;
+    /* border:thick */
+    /* border: 2px; */
+    height: 20px;
+    /* width: 4px; */
+  }
+  
+  .hey1>div>img{
+  display: flex;
+  height: 80px;
+  width: 120px;
+  }
+  .hey3+p{
+    text-align: center;
+  }
+  .image2{
+    display: flex;
+    justify-content: center;
+  }
+  .linkblue a{
+    text-decoration: underline;
+    color: #333f48;
+    font-weight: 540;
+    text-underline-offset:5px;
+    font-size:13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  @media (max-width:900px)
+  {
+    footer .content .link-boxes {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
+  }
+
+  footer {
+      align-items: center;
+      margin: auto;
+  }
+
+  .content {
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+  }
+  }
+  
+  @media (max-width: 700px){
+  footer {
+    position: relative;
+}
+
+.content .top .logo-details {
+    font-size: 26px;
+}
+
+.content .top .media-icons a {
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    line-height: 35px;
+}
+
+footer .content .link-boxes .box {
+    width: calc(100% / 3 - 10px);
+}
+
+footer .content .link-boxes .input-box {
+    width: 60%;
+}
+
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+    font-size: 12px;
+}
+  }
+  @media (max-width: 520px) {
+    footer::before {
+        top: 145px;
+    }
+
+    footer .content .top {
+        flex-direction: column;
+    }
+
+    .content .top .media-icons {
+        margin-top: 16px;
+    }
+
+    footer .content .link-boxes .box {
+        width: calc(100% / 2 - 10px);
+    }
+
+    footer .content .link-boxes .input-box {
+        width: 100%;
+    }
+  }
+
+
+
+        
+
+        
+    </Style>
+</head>
+<body>
+    <div id="main">
+        <div id="prod_img"></div>
+
+        <div id="prod_det">
+
+        </div>
+    </div>
+    <div id="details">
+        <h2>Items Details</h2>
+        <p id="name"></p>
+        <ul>
+            <li id="detail"></li>
+            <li>Flat wide base gives you enhanced stability</li>
+            <li>Foam midsole with a Max Air unit at the heel</li>
+            <li>Traction rubber tread outsole</li>
+            <li>Lace up front</li>
+        </ul>
+    </div>
+    </div>
+    <h2 style="margin: 0px 10%;">WE  THINK YOU MAY LIKE</h2>
+    <div id="product">
+
+    
+    </div>
+
+
+
+    <footer>
+        <div class="content">
+          <div id="connect">
+            <!-- upper part -->
+             <p>CONNECT WITH US</p>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+          <div class="link-boxes">
+           
+            <ul class="box">
+              <li class="link_name">STORES</li>
+              <li><a href="#">Famously Fast Pickup</a></li>
+              <li><a href="#">Find A Store</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">FAMOUSLY YOU</li>
+              <li><a href="#">Sign In / Join Now</a></li>
+              <li><a href="#">Learn More</a></li>
+              <li><a href="#">Credit Card</a></li>
+              <li><a href="#">Mobile App</a></li>
+              <li><a href="#">Rewards Terms</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">HELP</li>
+              <li><a href="#">FAQ / Contact Us</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+              <li><a href="#">Exclusions</a></li>
+              <li><a href="#">Track My Order</a></li>
+              <li><a href="#">Gift Cards</a></li>
+              <li><a href="#">Shoe Size Charts</a></li>
+              <li><a href="#">Zip</a></li>
+              <li><a href="#">Unsubscribe from Email</a></li>
+              <li><a href="#">Accessibility</a></li>
+              <li><a href="#">Do Not Sell or Share My Personal Information</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name"> ABOUT US</li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Ticket to Dream</a></li>
+              <li><a href="#">Site Map</a></li>
+              <li><a href="#">Eco-Conscious</a></li>
+            </ul>
+            <ul class="box-input">
+                
+              <div class="hey1">
+                <div>
+                  <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/rewards-images/plcc-double.png?w=+1440&hash=68621878391AE4CD59361AC547BEFA9F" alt="">
+                </div>
+                <div class="hey1-sub">
+                  <p>FAMOUSLY YOU REWARDS®</p>
+                  <p>Credit Card</p>
+                </div>
+              </div>
+              <div class="hey2">
+                <p>Learn More & Apply</p>
+                <p>Manage Card</p>
+              </div>
+              <div class="hey3">
+                <div>Privacy Policy</div>
+                <hr/>
+                <div>Terms & Conditions</div>
+                <hr/>
+                <div> Supply Chain Act</div>
+              </div>
+              <p>© 2023 Caleres, Inc.</p>
+              <div class="image2">
+              <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-assets/accessibility-icon.svg" alt="">
+              </div>   
+            </ul>
+          </div>
+        </div>
+        <p class="prep">Yes, I would like to receive emails with trends, updates & special offers a few times a week. By providing my information, I am certifying that I am at least 18 years old. Note: we collect and use the information you provide in accordance with our <span class="linkblue"><a href="#">Privacy Policy</a></span>.</p>
+      </footer>  
+</body>
+</html>
+<script>
+    var prod_details=JSON.parse(localStorage.getItem("ProductDetails"))||[];
+    displyDetails();
+
+    function displyDetails()
+    {
+        prod_details.map(function(elem)
+        {
+            var div1=document.createElement("div");
+
+            var img1=document.createElement("img");
+            img1.setAttribute("src",elem.img_u1);
+            img1.setAttribute("alt",elem.name);
+
+
+
+            var div2=document.createElement("div");
+
+            var img2=document.createElement("img");
+            img2.setAttribute("src",elem.img_u2);
+            img2.setAttribute("alt",elem.name);
+
+
+
+            var div3=document.createElement("div");
+
+            var img3=document.createElement("img");
+            img3.setAttribute("src",elem.img_u3);
+            img3.setAttribute("alt",elem.name);
+
+
+
+            var div4=document.createElement("div");
+
+            var img4=document.createElement("img");
+            img4.setAttribute("src",elem.img_u4);
+            img4.setAttribute("alt",elem.name);
+
+
+
+            var div5=document.createElement("div");
+
+            var img5=document.createElement("img");
+            img5.setAttribute("src",elem.img_u5);
+            img5.setAttribute("alt",elem.name);
+
+
+            div1.append(img1);
+            div2.append(img2);
+            div3.append(img3);
+            div4.append(img4);
+            div5.append(img5);
+
+            document.getElementById("prod_img").append(div1,div2,div3,div4,div5);
+
+
+            var h2=document.createElement("h2");
+            h2.textContent=elem.name;
+
+
+            var h5=document.createElement("h5");
+            h5.textContent="Shop all "+elem.brand;
+
+
+
+            // pricebox
+
+            var TpriceBox=document.createElement("div");
+            TpriceBox.setAttribute("class","TpriceBox");
+
+            var priceBox=document.createElement("div");
+            priceBox.setAttribute("class","priceBox");
+
+            var pric=document.createElement("h3");
+            pric.textContent="$"+elem.price;
+
+            var mrp=document.createElement("h3");
+            mrp.textContent="$"+elem.MRP;
+
+            priceBox.append(pric,mrp);
+
+
+            // payment details
+            var pay=document.createElement("div");
+            pay.setAttribute("class","pay");
+
+            var p=document.createElement("p");
+            p.textContent="or 3% off with";
+            
+            var payimg=document.createElement("div");
+            payimg.setAttribute("class","payimg");
+
+            var payi=document.createElement("img");
+            payi.setAttribute("src","https://www.bing.com/th?id=OIP.Vs62kDq0ibOSf4SeMr9nIwHaC0&w=283&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2");
+            img4.setAttribute("alt","VISA");
+
+            payimg.append(payi);
+            pay.append(p,payimg);
+
+
+            TpriceBox.append(priceBox,pay)
+
+
+
+
+            // rating
+
+            var rate=document.createElement("div");
+            rate.setAttribute("class","rate");
+
+            var star=document.createElement("h3");
+            star.textContent="Rating : "+elem.rating+".0";
+
+            var ri=document.createElement("img");
+            ri.setAttribute("src",elem.rate_img);
+            ri.setAttribute("alt",elem.rating);
+
+            var p1=document.createElement("p");
+            p1.textContent="Coupon Excluded";
+
+
+            rate.append(star,ri,p1);
+
+
+            // size
+            var sizeBo=document.createElement("div");
+            sizeBo.setAttribute("class","sizeBo");
+
+
+
+            var size=document.createElement("div");
+            size.setAttribute("class","size");
+
+            var sizeT=document.createElement("h3");
+            sizeT.textContent="Size:";
+
+
+
+            var btna=document.createElement("button");
+             btna.textContent="3.0";
+             btna.addEventListener("click",function(){
+                like("3.0");
+             });
+
+            var btnb=document.createElement("button");
+             btnb.textContent="4.0";
+             btnb.addEventListener("click",function(){
+                like("4.0");
+             });
+             var btnc=document.createElement("button");
+             btnc.textContent="4.5";
+             btnc.addEventListener("click",function(){
+                like("4.5");
+             });
+             
+            var btnd=document.createElement("button");
+             btnd.textContent="5.0";
+             btnd.addEventListener("click",function(){
+                like("5.0");
+             });
+             var btne=document.createElement("button");
+             btne.textContent="5.5";
+             btne.addEventListener("click",function(){
+                like("5.5");
+             });
+             
+            var btnf=document.createElement("button");
+             btnf.textContent="6.0";
+             btnf.addEventListener("click",function(){
+                like("6.0");
+             });
+             var btng=document.createElement("button");
+             btng.textContent="6.5";
+             btng.addEventListener("click",function(){
+                like("6.5");
+             });
+             
+
+
+
+            var btn1=document.createElement("button");
+             btn1.textContent="7.0";
+             btn1.addEventListener("click",function(){
+                like("7.0");
+             });
+
+             var btn2=document.createElement("button");
+             btn2.textContent="7.5";
+             btn2.addEventListener("click",function(){
+                like("7.5");
+             });
+
+             var btn3=document.createElement("button");
+             btn3.textContent="8.0";
+             btn3.addEventListener("click",function(){
+                like("8.0");
+             });
+
+             var btn4=document.createElement("button");
+             btn4.textContent="8.5";
+             btn4.addEventListener("click",function(){
+                like("8.5");
+             });
+
+             var btn5=document.createElement("button");
+             btn5.textContent="9.0";
+             btn5.addEventListener("click",function(){
+                like("9.0");
+             });
+
+             var btn6=document.createElement("button");
+             btn6.textContent="9.5";
+             btn6.addEventListener("click",function(){
+                like("9.5");
+             });
+
+             var btn7=document.createElement("button");
+             btn7.textContent="10";
+             btn7.addEventListener("click",function(){
+                like("10");
+             });
+
+             var btn8=document.createElement("button");
+             btn8.textContent="10.5";
+             btn8.addEventListener("click",function(){
+                like("10.5");
+             });
+
+             var btn9=document.createElement("button");
+             btn9.textContent="11";
+             btn9.addEventListener("click",function(){
+                like("11");
+             });
+
+             var btn10=document.createElement("button");
+             btn10.textContent="12";
+             btn10.addEventListener("click",function(){
+                like("12");
+             });
+
+
+             size.append(btna,btnb,btnc,btnd,btne,btnf,btng,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10);
+
+
+             sizeBo.append(sizeT,size);
+
+
+            //  width
+
+            var width=document.createElement("div");
+            width.setAttribute("class","width");
+
+            
+            var W=document.createElement("h3");
+            W.textContent="Width:";
+
+            
+             var btnW=document.createElement("button");
+             btnW.textContent="Medium";
+             btnW.setAttribute("class","btnW");
+
+
+             width.append(W,btnW);
+
+
+
+            //  adreess
+
+
+            var Oinp=document.createElement("div");
+            Oinp.setAttribute("class","Oinp");
+
+
+
+            var inp=document.createElement("div");
+            inp.setAttribute("class","inp");
+
+            var ip=document.createElement("input");
+            ip.setAttribute("type","radio");
+
+            // var inpD=document.createElement("div");
+
+            var inpT=document.createElement("h3");
+            inpT.textContent="Ship to Adress";
+
+            var par=document.createElement("p");
+            par.textContent="Receive in 4-7 business days with standard";
+            par.setAttribute("class","par");
+
+
+            inp.append(ip,inpT);
+
+
+            var inpS=document.createElement("div");
+            inpS.setAttribute("class","inpS");
+
+            var ipS=document.createElement("input");
+            ipS.setAttribute("type","radio");
+
+            // var inpD=document.createElement("div");
+
+            var inpTS=document.createElement("h3");
+            inpTS.textContent="Store Pickup - FREE";
+
+            var parS=document.createElement("p");
+            parS.textContent="Typically ready within 1 hour, never track a package again! Plus, Rewards members earn a bonus reward after picking up your order.";
+            parS.setAttribute("class","parS");
+
+            inpS.append(ipS,inpTS);
+
+            Oinp.append(inp,par,inpS,parS)
+
+
+
+
+            var btns=document.createElement("div");
+            btns.setAttribute("class","btns");
+
+            var btn=document.createElement("button");
+            btn.textContent="Add to Cart";
+            btn.setAttribute("class","btnn");
+            
+            btn.addEventListener("click",function(){
+                addToCart(elem);
+            });
+
+
+
+            var wish=document.createElement("button");
+            wish.textContent="Add to Wishlist";
+            wish.setAttribute("class","btnn1");
+            
+            wish.addEventListener("click",function(){
+                addToWhish(elem);
+            });
+
+            btns.append(btn,wish);
+
+
+
+
+
+
+            document.getElementById("prod_det").append(h2,h5,TpriceBox,rate,sizeBo,width,Oinp,btns);
+
+            document.getElementById("name").textContent=elem.name;
+            document.getElementById("detail").textContent=elem.Details;
+
+        });
+
+    //     var cartArr=JSON.parse(localStorage.getItem("Products"))|| [];
+    //  function addToCart(elem)
+    // {
+    //     cartArr.push(elem);
+    //     console.log(cartArr);
+    //     localStorage.setItem("Products",JSON.stringify(cartArr));
+
+    // }
+            var a="";
+            function like(b){
+                a=b;
+                localStorage.setItem("sizeList",a);
+
+            }
+
+            var cartArr=JSON.parse(localStorage.getItem("cartProducts"))|| [];
+            function addToCart(elem)
+            {
+                cartArr.push(elem);
+                console.log(cartArr);
+                localStorage.setItem("cartProducts",JSON.stringify(cartArr));
+            }
+
+            var whishArr=JSON.parse(localStorage.getItem("whishProducts"))|| [];
+            function addToWhish(elem)
+            {
+
+                whishArr.push(elem);
+                console.log(whishArr);
+                window.location.assign("./wishlist.html");
+                localStorage.setItem("whishProducts",JSON.stringify(whishArr));
+            }
+        }
+
+
+
+
+        var shoe=[
+        {
+         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/96/06/9/96069_right_feed1000.jpg",
+         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/96/06/9/96069_pair_feed1000.jpg",
+         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/96/06/9/96069_left_feed1000.jpg",
+         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/96/06/9/96069_top_feed1000.jpg",
+         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/96/06/9/96069_back_feed1000.jpg",
+         Details:"Leather upper in a high-top lifestyle sneaker style",
+         MRP:"79",
+         type:"Sneaker",
+         color:"grey",
+         brand:"Nike",
+         name:"Men's Court Royale 2 High Top Sneaker",
+         price:"70",
+         rate_img:"5.png",
+         rating:"5",
+         
+        },
+        {
+         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_right_feed1000.jpg",
+         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_pair_feed1000.jpg",
+         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_left_feed1000.jpg",
+         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_top_feed1000.jpg",
+         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/92/74/5/92745_back_feed1000.jpg",
+         Details:"Leather upper in a high-top lifestyle sneaker style",
+         MRP:"89",
+         type:"Sneaker",
+         brand:"Nike",
+         color:"white",
+         name:"Men's Court Royale 2 High Top Sneaker",
+         price:"85",
+         rate_img:"0.png",
+         rating:"0",
+        },
+        {
+         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/32/6/38326_right_feed1000.jpg",
+         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/32/6/38326_pair_feed1000.jpg",
+         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/32/6/38326_left_feed1000.jpg",
+         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/32/6/38326_top_feed1000.jpg",
+         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/32/6/38326_back_feed1000.jpg",
+         Details:"Flat wide base gives you enhanced stability",
+         MRP:"99",
+         type:"Sneaker",
+         color:"Red",
+         brand:"Nike",
+         name:"Men's Air Max Alpha Trainer 5 Sneaker",
+         price:"90",
+         rate_img:"5.png",
+         rating:"5",
+        },
+        {
+         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_right_feed1000.jpg",
+         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_pair_feed1000.jpg",
+         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_left_feed1000.jpg",
+         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_top_feed1000.jpg",
+         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/99/05/5/99055_back_feed1000.jpg",
+         Details:"Mesh and synthetic upper in a fashion sneaker style with a round toe",
+         MRP:"100.9",
+         type:"Sneaker",
+         color:"Black",
+         brand:"Adidas",
+         name:"Men's Kaptir 2.0 Magic Sneaker ",
+         price:"89.99",
+         rate_img:"4.png",
+         rating:"4",
+        },
+        {
+         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_right_feed1000.jpg",
+         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_pair_feed1000.jpg",
+         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_left_feed1000.jpg",
+         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_top_feed1000.jpg",
+         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/38/45/8/38458_back_feed1000.jpg",
+         Details:"Foam midsole with a Max Air unit at the heel",
+         MRP:"100.99",
+         type:"Sneaker",
+         color:"White",
+         brand:"Nike",
+         name:"Men's Air Max Alpha Trainer 5 Sneaker",
+         price:"89.99",
+         rate_img:"5.png",
+         rating:"5",
+        },
+        {
+         img_u1:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_right_feed1000.jpg",
+         img_u2:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_pair_feed1000.jpg",
+         img_u3:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_left_feed1000.jpg",
+         img_u4:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_top_feed1000.jpg",
+         img_u5:"https://www.famousfootwear.com/blob/product-images/20000/98/15/6/98156_back_feed1000.jpg",
+         Details:"Synthetic leather upper in a mid-top basketball inspired sneaker with a round toe",
+         MRP:"159",
+         type:"Sneaker",
+         color:"White",
+         brand:"Adidas",
+         name:"Men's Hoops 3.0 Mid Magic Sneaker",
+         price:"129",
+         rate_img:"5.png",
+         rating:"5",
+        }
+        ]
+
+        displayProd(shoe);
+
+
+    function displayProd(shoe)
+    {
+        shoe.map(function(elem)
+       {
+            var mast=document.createElement("div");
+            mast.setAttribute("class","mast");
+
+            mast.addEventListener("click",function(){
+                productDetails(elem);
+            });
+
+            // wishlist
+
+            var i=document.createElement("h3");
+            i.innerHTML="<i class='fa-sharp fa-regular fa-heart'></i>";
+            i.setAttribute("class","i");
+            i.addEventListener("click",function(){
+                addToWhish(elem);
+            });
+
+            
+        //    img section
+
+            var outer=document.createElement("div");
+            outer.setAttribute("class","outer");
+
+
+            var img1=document.createElement("img");
+
+            img1.setAttribute("src",elem.img_u1);
+            img1.setAttribute("alt",elem.name);
+
+
+            var inner =document.createElement("div");
+            inner.setAttribute("class","inner");
+
+
+            var img2=document.createElement("img");
+
+            img2.setAttribute("src",elem.img_u2);
+            img2.setAttribute("alt",elem.name);
+
+            //  name
+
+            var para=document.createElement("div");
+            para.setAttribute("class","para");
+
+
+            var h4=document.createElement("h4");
+            h4.textContent=elem.brand;
+
+
+            var p1=document.createElement("p");
+            p1.textContent=elem.name;
+
+        //    prices box
+
+            var box=document.createElement("div");
+            box.setAttribute("class","box1");
+
+            var p2=document.createElement("p");
+            p2.textContent= "$"+elem.price;
+
+
+            var p7=document.createElement("p");
+            p7.textContent= "$"+elem.MRP;
+
+
+            // rating
+
+            var imgR=document.createElement("img");
+
+            imgR.setAttribute("src",elem.rate_img);
+            imgR.setAttribute("alt",elem.rating);
+
+
+            inner.append(img2);
+
+            box.append(p2,p7);
+
+            para.append(h4,p1,box,imgR);
+
+            outer.append(img1,inner);
+
+            mast.append(i,outer,para);
+
+            document.querySelector("#product").append(mast);
+
+       });
+    
+    var DetailsArr=[];
+    function productDetails(elem)
+    {
+        DetailsArr.push(elem);
+         window.location.assign("./pruduct_details.html");
+        localStorage.setItem("ProductDetails",JSON.stringify(DetailsArr));
+    }
+    
+                
+
+    }
+    
+</script>

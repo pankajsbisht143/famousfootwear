@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whishlist</title>
+    <Style>
+        .WLbutton 
+        {
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            padding: 20px;
+            margin:95px 75px;
+        }
+        .add{
+            position: absolute;
+            left: 33%;
+            top: 33%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            width:400px;
+            height:250px;
+        }
+        #main {
+            margin: 0px 10%;
+        }
+        .mast{
+           height: 350px;
+        }
+
+        .mast:hover
+        {
+            transform: scale(1.1);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+        }
+
+        /* image  section */
+
+        #product
+        {
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 45px;
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;  */
+        }
+
+
+
+        .outer
+        {
+            position: relative;
+            width:100%;
+        }
+        .outer img,.inner img
+        {
+            width: 100% ;
+        }
+        .inner
+        {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .outer:hover .inner
+        {
+            display: block;
+        }
+
+
+        .i
+        {
+            align-items: right;
+            text-align: right;
+            margin-bottom: 0px;
+            margin-right: 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        /* name section */
+
+
+        .para
+        {
+            text-align: center;
+            margin-top: -25px;
+            
+        }
+        .para img
+        {
+            width: 40%;
+           height: auto;
+            margin-top: -10px;
+        }
+
+
+        .box
+        {
+            display: flex;
+            justify-content: space-around;
+            margin: -20px;
+        }
+        .box p+p
+        {
+            text-decoration: line-through;
+        }
+
+
+    </Style>
+</head>
+<body>
+     <div id="main">
+        <h1>Wishlist</h1>
+        <p class="num"></p>
+        <div id="product"></div>
+     </div>
+</body>
+</html>
+<script>
+    var whish=JSON.parse(localStorage.getItem("whishProducts"))||[];
+    if(whish.length==0)
+    {
+       var num=whish.length;
+       document.querySelector(".num").textContent="WishList Products - "+num;
+
+       var div=document.createElement("div");
+       div.setAttribute("class","add");
+
+
+        var btn=document.createElement("button");
+        btn.textContent="ADD PRODUCTS TO WHISHLIST";
+        btn.setAttribute("class","WLbutton");
+
+
+        div.append(btn);
+        document.querySelector("body").append(div);
+    }
+    else{
+          displayWL(whish);
+    }
+
+
+    function displayWL(whish)
+    {
+        var num=whish.length;
+        if(num===0)
+        {
+            document.querySelector(".num").textContent="Wishlist Products - "+num;
+        }
+        else
+        {
+            whish.map(function(elem)
+         {
+            var mast=document.createElement("div");
+            mast.setAttribute("class","mast");
+
+            mast.addEventListener("click",function(){
+                productDetails(elem);
+            });
+
+            // wishlist
+
+            var i=document.createElement("h3");
+            i.innerHTML="<i class='fa-sharp fa-regular fa-heart'></i>";
+            i.setAttribute("class","i");
+            i.addEventListener("click",function(){
+                addToWhish(elem);
+            });
+
+            
+        //    img section
+
+            var outer=document.createElement("div");
+            outer.setAttribute("class","outer");
+
+
+            var img1=document.createElement("img");
+
+            img1.setAttribute("src",elem.img_u1);
+            img1.setAttribute("alt",elem.name);
+
+
+            var inner =document.createElement("div");
+            inner.setAttribute("class","inner");
+
+
+            var img2=document.createElement("img");
+
+            img2.setAttribute("src",elem.img_u2);
+            img2.setAttribute("alt",elem.name);
+
+            //  name
+
+            var para=document.createElement("div");
+            para.setAttribute("class","para");
+
+
+            var h4=document.createElement("h4");
+            h4.textContent=elem.brand;
+
+
+            var p1=document.createElement("p");
+            p1.textContent=elem.name;
+
+        //    prices box
+
+            var box=document.createElement("div");
+            box.setAttribute("class","box");
+
+            var p2=document.createElement("p");
+            p2.textContent= "$"+elem.price;
+
+
+            var p7=document.createElement("p");
+            p7.textContent= "$"+elem.MRP;
+
+
+            // rating
+
+            var imgR=document.createElement("img");
+
+            imgR.setAttribute("src",elem.rate_img);
+            imgR.setAttribute("alt",elem.rating);
+
+
+            inner.append(img2);
+
+            box.append(p2,p7);
+
+            para.append(h4,p1,box,imgR);
+
+            outer.append(img1,inner);
+
+            mast.append(i,outer,para);
+
+            document.querySelector("#product").append(mast);
+
+
+            document.querySelector(".num").textContent="Wishlist Products - "+num;
+
+        });
+        
+        var DetailsArr=[];
+        function productDetails(elem)
+        {
+            DetailsArr.push(elem);
+            window.location.assign("./pruduct_details.html");
+            localStorage.setItem("ProductDetails",JSON.stringify(DetailsArr));
+        }
+    }
+        
+}
+</script>
