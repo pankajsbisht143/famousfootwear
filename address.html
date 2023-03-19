@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ADDRESS</title>
+    <style>
+      footer{
+    /* position: fixed; */
+    background:#f0f0f0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: none;
+    text-decoration: none;
+    line-height: 20px;
+    border-top:5px solid #d50032;
+   
+     
+    
+   
+  }
+  
+  footer .content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 40px 40px 40px;
+  }
+  
+    
+  
+  footer .content .link-boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 5 - 10px);
+  }
+  .content .link-boxes .box .link_name{
+    color:#333f48;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .content .link-boxes .box li{
+    margin: 6px 0;
+    list-style: none;
+  }
+  .content .link-boxes .box li a{
+    
+    color: black;
+    
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+    font-size:14px;
+  font-weight: 300;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .content .link-boxes .box li a:hover{
+    opacity: 1;
+    text-decoration: underline;
+  }
+  .content .link-boxes .input-box{
+    margin-right: 55px;
+  }
+  .link-boxes .input-box input{
+    height: 40px;
+    width: calc(100% + 55px);
+    outline: none;
+    border: 2px solid #AFAFB6;
+    background: #140B5C;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  .link-boxes .input-box input::placeholder{
+    color: #AFAFB6;
+    font-size: 16px;
+  }
+  .link-boxes .input-box input[type="button"]{
+    background: #fff;
+    color: #140B5C;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 4px 0;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .input-box input[type="button"]:hover{
+    opacity: 1;
+  }
+  footer .bottom-details{
+    width: 100%;
+    background: #0F0844;
+  }
+  footer .bottom-details .bottom_text{
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+ 
+  .prep{
+    width: 80%;
+    margin: auto;
+    color: #333f48;
+    font-size:14px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #connect{
+    display: flex;
+    gap:3%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    text-decoration: none;
+  }
+  #connect i{
+    font-size:x-large;
+    text-decoration: none;
+    color: #333f48;
+    
+  }
+  #connect p{
+    font-size:14px;
+    font-weight: 300; 
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #333f48;
+  text-decoration: none;
+  }
+  #connect a:hover{
+    text-decoration: none;
+  }
+  .hey1{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+  }
+  .box-input{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #333f48;
+  text-decoration: none;
+  font-size:14px;
+  font-weight: 300;
+  
+  }
+  .hey2{
+    display: flex;
+    justify-content: space-between;
+  }
+  .hey3{
+    display: flex;
+    justify-content: space-between;
+  }
+  .hey3 hr{
+    transform: rotate(180deg);
+    margin-right: 15px;
+    margin-left: 5px;
+    text-decoration: solid;
+    font-weight: 500;
+    font-size: larger;
+    text-decoration-line: solid;
+    text-decoration-thickness:inherit;
+    /* border:thick */
+    /* border: 2px; */
+    height: 20px;
+    /* width: 4px; */
+  }
+  
+  .hey1>div>img{
+  display: flex;
+  height: 80px;
+  width: 120px;
+  }
+  .hey3+p{
+    text-align: center;
+  }
+  .image2{
+    display: flex;
+    justify-content: center;
+  }
+  .linkblue a{
+    text-decoration: underline;
+    color: #333f48;
+    font-weight: 540;
+    text-underline-offset:5px;
+    font-size:13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  @media (max-width:900px)
+  {
+    footer .content .link-boxes {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
+  }
+
+  footer {
+      align-items: center;
+      margin: auto;
+  }
+
+  .content {
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+  }
+  }
+  
+  @media (max-width: 700px){
+  footer {
+    position: relative;
+}
+
+.content .top .logo-details {
+    font-size: 26px;
+}
+
+.content .top .media-icons a {
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    line-height: 35px;
+}
+
+footer .content .link-boxes .box {
+    width: calc(100% / 3 - 10px);
+}
+
+footer .content .link-boxes .input-box {
+    width: 60%;
+}
+
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+    font-size: 12px;
+}
+  }
+  @media (max-width: 520px) {
+    footer::before {
+        top: 145px;
+    }
+
+    footer .content .top {
+        flex-direction: column;
+    }
+
+    .content .top .media-icons {
+        margin-top: 16px;
+    }
+
+    footer .content .link-boxes .box {
+        width: calc(100% / 2 - 10px);
+    }
+
+    footer .content .link-boxes .input-box {
+        width: 100%;
+    }
+  }
+      #fash {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#fash>div {
+    display: flex;
+    gap: 20px;
+}
+#fash img {
+    width: 60%;
+    height: 60%;
+}
+#fash hr{
+    transform: rotate(180deg);
+     margin-right: 15px;
+    margin-left: 15px;
+}
+        body {
+    font-family: Whitney,Helvetica,Arial,sans-serif!important;
+}
+.header {
+    border-bottom: 1px solid black;
+    overflow: hidden;
+    padding: -10px -20px;
+}
+.mLogo {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-left: 10px;
+}
+.headerCenter {
+    float: left;
+    line-height: 45px;
+    margin-left: 400px;
+    margin-top: 60px;
+}
+ .headerCenter a{
+  
+    text-decoration: none;
+    font-family: Whitney,Helvetica,Arial,sans-serif!important;
+    color: #696B79;
+    word-spacing: 5px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size:large;
+}
+
+.headerRight {
+    float: right;
+    line-height: 12px;
+    margin-right: 10px;
+}
+ h4 {
+    text-decoration: none;
+    font-family: Whitney,Helvetica,Arial,sans-serif!important;
+    color: #696B79;
+    word-spacing: 5px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size:large;
+}
+.image2 {
+    width: 30px;
+    margin-top: 40px;
+    
+}
+h4 {
+    margin-left: 5px;
+}
+.address {
+    border: 1px solid #F5F5F6; 
+    width: 36%;
+    margin: 40px 40px 40px 250px;
+}
+.container1 {
+    margin: 15px;
+}
+.name {
+    position: relative;
+    display: inline-block;
+    width: 98%;
+    height: 40px;
+    border-width: thin;
+    border: 1px solid black;;
+    border-radius: 2px;
+    padding-left: 13px;;
+
+}
+.data {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    height: 40px;
+    border: none;
+    background-color: black;
+    padding-left: 13px;
+
+}
+#data2 {
+   margin-right:10px ;
+}
+.button1 {
+    background-color: white;
+    border: 1px solid red;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    width: 90px;
+    height: 35px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+.container2 {
+    background: #fff;
+    padding: 8px;
+    box-shadow: 0 -1px 4px 0 #1f1e1e4d;
+}
+.button2 {
+    background-color: #140609!important;
+    font-size: 14px!important;
+    border-radius: 4px!important;
+    padding: 14px!important;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    border: none;
+
+}
+h3 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #282c3f;
+    text-rendering: optimizeLegibility;
+}
+.footer {
+    border-top: 1px solid #F5F5F6;
+    margin: 0 0 10px 0;
+}
+.footer .container3 {
+    display: inline-block;
+}
+.images {
+    width: 70px;
+    margin-top: 10px;
+    height: 40px;
+}
+.container3 {
+    margin-left: 140px;
+}
+.contact {
+    float: right;
+    font-size: 14px;
+    padding-top: 20px;
+    
+}
+#button1{
+  background-color: black;
+  color: white;
+  border: none;
+  width: 20%;
+  height: 40px;
+}
+#button2{
+  background-color: black;
+  color: white;
+  border: none;
+  width: 20%;
+  height: 40px;
+}
+
+    </style>
+  </head>
+  <body>
+    
+    
+    <div class="header">
+      <img
+        class="mLogo"
+        src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-assets/famous-footwear-logo.svg"
+      />
+      <div class="headerCenter">
+        <a href="C:\Users\HP\Desktop\project\bag.html">CART --------</a>
+        <a href="C:\Users\HP\Desktop\project\address.html">ADDRESS --------</a>
+        <a href="C:\Users\HP\Desktop\project\payment.html">PAYMENT</a>
+      </div>
+      <div class="headerRight">
+        <img
+          class="image2"
+          src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"
+        />
+        <h4 style="float: right">100% SECURE</h4>
+      </div>
+    </div>
+
+    <div class="address">
+      <form id="addressForm">
+        <div class="container1">
+          <h3>CONTACT DETAILS</h3>
+
+          <input
+            class="name"
+            id="name"
+            type="text"
+            placeholder="NAME*"
+          /><br /><br />
+          <input
+            class="name"
+            id="mobileNo"
+            type="number"
+            placeholder="Mobile No*"
+          /><br /><br />
+        </div>
+        <div class="container1">
+          <h3>ADDRESS</h3>
+
+          <input
+            class="name"
+            id="pincode"
+            type="number"
+            placeholder="Pin Code*"
+          /><br /><br />
+          <input
+            class="name"
+            id="address"
+            type="text"
+            placeholder="Address(House No, Building, Street, Area)*"
+          /><br /><br />
+          <input
+            class="name"
+            id="location"
+            type="text"
+            placeholder="Location/Town*"
+          /><br /><br />
+          <input class="data" id="data2" type="text" placeholder="City*" />
+          <input class="data" id="data1" type="text" placeholder="State*" />
+        </div>
+      </form>
+      <div class="container1">
+        <h3>SAVE ADDRESS AS</h3>
+          <div id="pers">
+            <button id="button1">Home</button>
+        <button id="button2">Work</button><br /><br />
+          </div>
+        
+        <input type="checkbox" id="checkBox" />
+        <label for="checkBox" style="font-size: 14px; margin-left: 8px"
+          >Make this my Default Address</label
+        >
+      </div>
+      <div class="container2">
+        <button class="button2" onclick="addAddress()">ADD ADDRESS</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container3">
+        <img
+          class="images"
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png"
+        />
+        <img
+          class="images"
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png"
+        />
+        <img
+          class="images"
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png"
+        />
+        <img
+          class="images"
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png"
+        />
+        <img
+          class="images"
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png"
+        />
+        <img
+          class="images"
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png"
+        />
+        <img
+          class="images"
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png"
+        />
+        <img
+          class="images"
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png"
+        />
+        <img
+          class="images"
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png"
+        />
+        <img
+          class="images"
+          src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png"
+        />
+      </div>
+
+      <a class="contact" href=""><span>Need Help? Contact Us</span></a>
+    </div>
+    <div class="newContainer"></div>
+    <footer>
+      <div class="content">
+        <div id="connect">
+          <!-- upper part -->
+           <p>CONNECT WITH US</p>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+        <div class="link-boxes">
+         
+          <ul class="box">
+            <li class="link_name">STORES</li>
+            <li><a href="#">Famously Fast Pickup</a></li>
+            <li><a href="#">Find A Store</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">FAMOUSLY YOU</li>
+            <li><a href="#">Sign In / Join Now</a></li>
+            <li><a href="#">Learn More</a></li>
+            <li><a href="#">Credit Card</a></li>
+            <li><a href="#">Mobile App</a></li>
+            <li><a href="#">Rewards Terms</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">HELP</li>
+            <li><a href="#">FAQ / Contact Us</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Exclusions</a></li>
+            <li><a href="#">Track My Order</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Shoe Size Charts</a></li>
+            <li><a href="#">Zip</a></li>
+            <li><a href="#">Unsubscribe from Email</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Do Not Sell or Share My Personal Information</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name"> ABOUT US</li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Ticket to Dream</a></li>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="#">Eco-Conscious</a></li>
+          </ul>
+          <ul class="box-input">
+              
+            <div class="hey1">
+              <div>
+                <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/rewards-images/plcc-double.png?w=+1440&hash=68621878391AE4CD59361AC547BEFA9F" alt="">
+              </div>
+              <div class="hey1-sub">
+                <p>FAMOUSLY YOU REWARDS®</p>
+                <p>Credit Card</p>
+              </div>
+            </div>
+            <div class="hey2">
+              <p>Learn More & Apply</p>
+              <p>Manage Card</p>
+            </div>
+            <div class="hey3">
+              <div>Privacy Policy</div>
+              <hr/>
+              <div>Terms & Conditions</div>
+              <hr/>
+              <div> Supply Chain Act</div>
+            </div>
+            <p>© 2023 Caleres, Inc.</p>
+            <div class="image2">
+            <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-assets/accessibility-icon.svg" alt="">
+            </div>   
+          </ul>
+        </div>
+      </div>
+      <p class="prep">Yes, I would like to receive emails with trends, updates & special offers a few times a week. By providing my information, I am certifying that I am at least 18 years old. Note: we collect and use the information you provide in accordance with our <span class="linkblue"><a href="#">Privacy Policy</a></span>.</p>
+    </footer>  
+  </body>
+</html>
+<script>
+  
+  
+function addAddress() {
+    const form = document.getElementById("addressForm");
+
+    const name = form.name.value;
+    const mobileNo = form.mobileNo.value;
+    const pincode = form.pincode.value;
+    const address = form.address.value;
+    const location = form.location.value;
+    const city = form.data2.value;
+    const state = form.data1.value;
+
+    let address1 = {
+        name,
+        mobileNo,
+        pincode,
+        address,
+        location,
+        city,
+        state
+    };
+
+    for (k in address1) {
+        if (address1[k].length === 0) {
+            alert("Please fill all feilds")
+            return;
+        }
+    }
+    window.location.href = "payment.html"
+}
+document.getElementById("button1").addEventListener("click",addtoEl);
+document.getElementById("button2").addEventListener("click",addtoEp);
+function addtoEl(){
+        document.querySelector("#button1").textContent="✔";
+}
+function addtoEp(){
+  document.querySelector("#button2").textContent="✔";
+}
+</script>
