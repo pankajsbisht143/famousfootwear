@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <style>
           /* body {
   background-image: url('https://img.freepik.com/free-photo/top-view-sneakers-white-background-fitness-wear-equipment-sport-fashion-sport-accessories-sport-equipment-healthy-concept-copy-space-concept-healthy-lifestyle-sport-diet-sport-equipment_1391-724.jpg?w=2000');
-} */
+} *//*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/*=============== VARIABLES CSS ===============*/
       #h1b{
   margin: auto;
   width: 100%;
@@ -53,7 +56,7 @@ after { clear: both; }
         }
         /* }1em */
        
-        #signin form input[type="password"] {
+        /* #signin form input[type="password"] {
           background-color: white;
           border-radius: 0px 15px 15px 15px;
           color: #a9a9a9;
@@ -61,8 +64,20 @@ after { clear: both; }
           padding: 0 16px;
           width: 90%;
           height: 40px;
+          position: static;
           
+        } */
+        #password {
+          background-color: white;
+          border-radius: 0px 15px 15px 15px;
+          color: #a9a9a9;
+          margin-bottom:-3% ;
+          padding: 0 16px;
+          width: 90%;
+          height: 40px;
+          position: static;
         }
+
         #signin form input[type="submit"] {
           background: lightblue;
           border: 0;
@@ -81,6 +96,12 @@ after { clear: both; }
           font-size: 13px;
           font-variant-position: inherit;
         }
+        /* see passowrd button */
+       
+ 
+
+        /* see password end */
+       
         .nav{
         margin-top: 5%;
      }
@@ -127,9 +148,13 @@ h4{
  width: 8%;
 }
 
+#showPass{
+  margin: 12px;
+  
+  border: none;
+}
 
-
-/* footer start */
+/*################################# footer start####################################### */
 
 
 
@@ -419,10 +444,992 @@ width: 120px;
 }
 
 
+
+
+
+
+/* navbar below */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+nav{
+   
+  margin: auto;
+  z-index: 99;
+  width: 80%;
+ text-align: center;
+  background-color: white;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+nav .wrapper{
+  position: relative;
+  max-width:100%;
+  /* padding: 0px 30px; */
+  height:70px;
+  line-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.wrapper .logo a{
+  color:#242526;
+ 
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.wrapper .nav-links{
+  display: inline-flex;
+ margin-bottom: -200px;
+ margin-top: 20px;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links li a{
+
+  color: #3A3B3C;
+  text-decoration: none;
+  font-size:medium;
+  font-weight:530;
+  padding: 9px 15px;
+font-stretch:ultra-expanded;
+
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+ 
+  text-decoration: underline;
+}
+.nav-links .mobile-item{
+  display: none;
+}
+.nav-links .drop-menu{
+  position: absolute;
+  background-color: white;
+  width: 180px;
+  line-height: 10px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box{
+  transition: all 0.3s ease;
+  top: 47px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a{
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+.mega-box{
+  position: absolute;
+  left: 0;
+  width:100%;
+  background: white;
+  background-size: 100% 100%;
+  padding: 0 30px;
+  margin-top: 7%;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content{
+  background-color: white;
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.mega-box .content .row{
+  width: calc(25% - 30px);
+  line-height: 30px;
+}
+.content .row img{
+  width: 100%;
+  height: 90%;
+  padding: 4px;
+  object-fit: cover;
+}
+.content .row header{
+  color:#333f48;
+  font-size: 20px;
+  font-weight: 500;
+}
+.content .row .mega-links{
+  margin-left: -40px;
+  border-left: 1px solid rgba(255,255,255,0.09);
+}
+.row .mega-links li{
+  padding: 0 20px;
+}
+.row .mega-links li a{
+  padding: 0px;
+  padding: 0px 20px;
+  color:#333f48;
+  font-size: 17px;
+  display: block;
+}
+
+.wrapper .btn{
+  color: #fff;
+  font-size: 10px;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.close-btn{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+nav input{
+  display: none;
+}
+
+.body-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  padding: 0 30px;
+}
+.body-text div{
+  font-size: 40px;
+  font-weight: 600;
+}
+
+ #content{
+  display:grid;
+  grid-template-columns: repeat(5,1fr);
+} 
+
+#content img{
+  display: flex;
+  width: 180px;
+  height: 180px; 
+  
+}
+
+#upper{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; 
+  align-content: center;
+   gap:4%; 
+  color:#333f48;
+  margin-top: 10%;
+  margin-bottom:-2%;
+  text-decoration: none; 
+  
+}
+#upper i{
+  font-size:x-large;
+  color:rgba(0, 0, 0, 0.696);
+
+}
+#upper>a:nth-child(1)
+{
+  width:50%;
+  height:70px;
+}
+.add
+{
+  display: flex;
+   align-items: center; 
+   height: 80%;
+  width:100%;
+ border: 2px solid ;
+ border-color: #333f48;
+ color: #3A3B3C;
+}
+
+ #inputtag{
+  display: flex;
+  width:80%;
+  border: none;
+  font-size:large;
+  font-weight: 500;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  border: white;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.logo img{
+  display: flex;
+height:200px;
+  width: 200px;
+}
+
+.desktop-item{
+  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ color:
+ #d50032;
+ font-size:medium;
+}
+.desktop-item:hover{
+  text-decoration: underline;
+}
+.row header{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:xx-large;
+  font-weight:900;
+}
+.sizebox>.mega-links{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  text-decoration: underline;
+
+  color:
+#333f48;
+font-size: xx-large;
+font-weight: 900;
+text-decoration-style: solid;
+text-underline-offset:20%;
+}
+nav+hr {
+  margin-top: 4.5%;
+}
+
+@media screen and (max-width:1106px)
+{
+  .nav-links li a{
+    font-size: 16px;
+    padding: 0px 8px;
+  }
+}
+@media screen and (max-width:982px)
+{
+  .nav-links li a{
+    font-size: 15px;
+    padding: 0px 8px;
+  }
+}
+@media screen and (max-width: 970px) {
+
+  .wrapper .btn{
+    display: block;
+  }
+  #upper>a>i{
+    visibility: hidden;
+
+  }
+  /* #upper button{
+    display: flex;
+    width:100%;
+    height:30%;
+    margin-left: 40%;
+    margin-top:-1%;
+  }
+  #upper button p{
+    color:#9cacbe;
+    font-size:medium;
+    font-weight: 200;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  } */
+  .wrapper .nav-links{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: #242526;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;
+  }
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3A3B3C;
+  }
+  #menu-btn:checked ~ .nav-links{
+    left: 0%;
+  }
+  #menu-btn:checked ~ .btn.menu-btn{
+    display: none;
+  }
+  #close-btn:checked ~ .btn.menu-btn{
+    display: block;
+  }
+  .nav-links li{
+    margin: 15px 10px;
+  }
+  .nav-links li a{
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .nav-links .drop-menu{
+    position: static;
+    opacity: 1;
+    top: 65px;
+    visibility: visible;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+  #showDrop:checked ~ .drop-menu,
+  #showMega:checked ~ .mega-box{
+    max-height: 100%;
+  }
+  .nav-links .desktop-item{
+    display: none;
+  }
+  .nav-links .mobile-item{
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-links .mobile-item:hover{
+    background: #3A3B3C;
+  }
+  .drop-menu li{
+    margin: 0;
+  }
+  .drop-menu li a{
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .mega-box{
+    position: static;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content{
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row{
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2){
+    border-top: 0px;
+  }
+  .content .row .mega-links{
+    border-left: 0px;
+    padding-left: 15px;
+  }
+  .row .mega-links li{
+    margin: 0;
+  }
+  .content .row header{
+    font-size: 19px;
+  }
+  .upper{
+      display: flex;
+      align-items: center;
+  }
+}
+@media screen and (max-width:641px)
+{
+
+.logo img{
+  height: 150px;
+  width: 150px;
+
+}
+.add{
+visibility: hidden;
+}
+
+#upper>a>i{
+
+visibility: visible;
+
+}
+
+.logo{
+margin-left:-10%;
+margin-right: -30%;
+}
+}
+@media screen and(max-width:400px)
+{
+.logo img{
+  height: 90px;
+  width: 90px;
+
+}
+.sign>p{
+  font-size: smaller;
+}
+#upper>a>i{
+  font-size: small;
+}
+}
+
+
+
+
+
+
+
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    />
   </head>
   <body>
     
+
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="#"><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-assets/famous-footwear-logo.svg"></a></div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <div id="combine">
+          <div id="upper">
+            <a href="#"><div class="add"><input id="inputtag" placeholder="Find Something Famous For You"><i class="fa-solid fa-magnifying-glass"></i></div></a>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+        <a href=""><i class="fa-sharp fa-regular fa-heart"></i></a>
+        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+         
+         
+  <!-- new and know -->
+  <li>
+    <a href="#" class="desktop-item">New & Know</a>
+    <!-- <input type="checkbox" id="showMega"> -->
+    <!-- <label for="showMega" class="mobile-item">New & Know</label> -->
+    <div class="mega-box">
+      <div class="content">
+        <!-- 1st div -->
+        <div class="row">
+          <header>Spotlight On</header>
+          <ul class="mega-links">
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Eco-Conscious Styles</a></li>
+            <li><a href="#">Spring Loafers</a></li>
+          </ul>
+          <header>Shop by Occasion</header>
+          <ul class="mega-links">
+            <li><a href="#">Weddings & Events</a></li>
+            <li><a href="#">Beach Getaway</a></li>
+          </ul>
+        </div>
+        <!-- 2nd div -->
+        <div class="row">
+          <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/wk2_020823_site_ads_mega_nav_spg23_sandalshop.jpg" alt="">
+          <header>Sandal Shop</header>
+        </div>
+        <!-- 3rd div -->
+        <div class="row">
+          <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/mega_nav_spg23_wsneakershop.jpg" alt="">
+          <header>Sneaker Shop</header>
+        </div>
+        <!-- 4th div -->
+            <div class="row">
+              <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/wk2_020823_site_ads_mega_nav_spg23_activeshop.jpg" alt="">
+              <header>Active Shop</header>
+            </div>
+            <!-- 5th div -->
+            <div class="row">
+              <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/wk2_020823_site_ads_mega_nav_spg23_getaway.jpg" alt="">
+              <header>GetAway Shop</header>
+            </div>
+        </div>
+      </div>
+  
+  </li>
+  
+  
+  <!-- kids section -->
+  <li>
+    <a href="#" class="desktop-item">Kids</a>
+    <!-- <input type="checkbox" id="showMega">
+    <label for="showMega" class="mobile-item">Kids</label> -->
+    <div class="mega-box">
+      <div class="content">
+        <!-- 1st div -->
+        <div class="row">
+          <header>Shop by Size</header>
+          <ul class="mega-links">
+            <li><a href="#">Baby (0-3.5)</a></li>
+            <li><a href="#">Toddler (4-10)</a></li>
+            <li><a href="#">Little Kid (10.5-3)</a></li>
+            <li><a href="#">Big Kid (3.5-7)</a></li>     
+          </ul>
+          <header>View All Kids' Shoes</header>
+        </div>
+        <!-- 2nd div -->
+        <div class="row">
+          <header> Girls' Shoes</header>
+          <ul class="mega-links">
+            <li><a href="#">View All</a></li>
+            <li><a href="#">Bottoms</a></li>
+            <li><a href="#">Tops</a></li>
+            <li><a href="#">Boots</a></li>
+            <li><a href="#">sandals</a></li>
+            <li><a href="#">dress Shoes</a></li>
+            <li><a href="#">Mary Janes</a></li>
+            <li><a href="#">Slippers</a></li>
+          </ul>
+        </div>
+        <!-- 3rd div -->
+       
+        <div class="row">
+          <header>Boy's Shoes</header>
+         
+          <ul class="mega-links">
+            <li><a href="#">Sneakers & Athletics</a></li>
+            <li><a href="#">Boots</a></li>
+            <li><a href="#">Sandals</a></li>
+            <li><a href="#">Dress Shoes</a></li>
+            <li><a href="#">Boat Shoes</a></li>
+            <li><a href="#">Slipper</a></li>
+          </ul>
+        
+        </div>
+        <!-- 4th div -->
+  <div class="row">
+    <header>Other Ways to Shop</header>
+    <ul class="mega-links">
+      <li><a href="#">New Arrivals</a></li>
+      <li><a href="#">Back In Stock</a></li>
+      <li><a href="#">Eco-Conscious</a></li>
+    </ul>
+  </div>
+  <!-- 5th div  -->
+  <div class="row">
+    <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/kids-tab/2023/spring/wk2_020823_site_ads_mega_nav_spg23_kids_skechers.jpg" alt="">
+    <header>Sandal Trend Shop</header>
+  </div>
+        </div>
+      </div>
+  
+  </li>
+  
+  
+  <!-- women section -->
+          <li>
+            <a href="#" class="desktop-item">Women</a>
+            <!-- <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Women</label> -->
+            <div class="mega-box">
+              <div class="content">
+                <!-- 1st div -->
+                <div class="row">
+                  <header>Women Shoes</header>
+                  <ul class="mega-links">
+                    <li><a href="#">View All</a></li>
+                    <li><a href="#">Sneakers & Athletics</a></li>
+                    <li><a href="#">Sandals</a></li>
+                    <li><a href="#">Heels</a></li>
+                    <li><a href="#">Loafers & Oxfords</a></li>
+                    <li><a href="#">Flats</a></li>
+                    <li><a href="#">Boots</a></li>
+                    <li><a href="#">Slippers</a></li>
+                    <li><a href="#">Work & Safety</a></li>
+                  </ul>
+                </div>
+                <!-- 2nd div -->
+                <div class="row">
+                  <header>Apparel</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Tops</a></li>
+                    <li><a href="#">Bottoms</a></li>
+                  </ul>
+                  <header>Other Ways To Shop</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Back In Stock</a></li>
+                    <li><a href="#">Eco-Conscious</a></li>
+                  </ul>
+                  <header>Spotlight On</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Sneaker Trend Shop</a></li>
+                    <li><a href="#">Active & Outdoor Shop</a></li>
+                    <li><a href="#">Weddings & Events</a></li>
+                    <li><a href="#">Beach Getaway Style</a></li>
+                  </ul>
+                </div>
+                <!-- 3rd div -->
+                <div class="row">
+                  <header>Shop By Size</header>
+                  <div class="sizebox">
+                  <ul class="mega-links">
+                    <li><a href="#">4.5</a></li>
+                    <li><a href="#">5.0</a></li>
+                    <li><a href="#">5.5</a></li>
+                    <li><a href="#">6.0</a></li>
+                    <li><a href="#">6.5</a></li>
+                    <li><a href="#">7.0</a></li>
+                    <li><a href="#">7.5</a></li>
+                    <li><a href="#">8.0</a></li>
+                    <li><a href="#">8.5</a></li>
+                    <li><a href="#">9.0</a></li>
+                    <li><a href="#">9.5</a></li>
+                    <li><a href="#">10.0</a></li>
+                    <li><a href="#">10.5</a></li>
+                    <li><a href="#">11.0</a></li>
+                    <li><a href="#">12+</a></li>
+                  </ul>
+                </div>
+                </div>
+                <!-- 4th div -->
+                    <div class="row">
+                      <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/womens-tab/2023/spring/wk2_020823_site_ads_mega_nav_spg23_sandalshop.jpg" alt="">
+                      <header>Sandal Trend Shop</header>
+                    </div>
+                </div>
+              </div>
+          
+          </li>
+  
+  
+          <!-- men section -->
+          <li>
+              <a href="#" class="desktop-item">Men</a>
+              <!-- <input type="checkbox" id="showMega">
+              <label for="showMega" class="mobile-item">Men</label> -->
+              <div class="mega-box">
+                <div class="content">
+                  <!-- 1st div -->
+                  <div class="row">
+                    <header>Men's Shoes</header>
+                    <ul class="mega-links">
+                      <li><a href="#">View All</a></li>
+                      <li><a href="#">Sneakers & Athletics</a></li>
+                      <li><a href="#">Sandals</a></li>
+                      <li><a href="#">Clogs & Mules</a></li>
+                      <li><a href="#">Loafers & Oxfords</a></li>
+                      <li><a href="#">Flats</a></li>
+                      <li><a href="#">Boots</a></li>
+                      <li><a href="#">Slippers</a></li>
+                      <li><a href="#">Work & Safety</a></li>
+                    </ul>
+                  </div>
+    
+                  <!-- 2nd div -->
+                  <div class="row">
+                    <header>Other Ways To Shop</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Sale</a></li>
+                      <li><a href="#">New Arrivals</a></li>
+                      <li><a href="#">Back In Stock</a></li>
+                      <li><a href="#">Eco-Conscious</a></li>
+                    </ul>
+                    <header>Spotlight On</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Sneaker Trend Shop</a></li>
+                      <li><a href="#">Active & Outdoor Shop</a></li>
+                      <li><a href="#">Weddings & Events</a></li>
+                      <li><a href="#">Beach Getaway Style</a></li>
+                    </ul>
+                  </div>
+                  <!-- 3rd div -->
+                  <div class="row">
+                    <header>Shop By Size</header>
+                    <div class="sizebox">
+                    <ul class="mega-links">
+                      <li><a href="#">4.5</a></li>
+                      <li><a href="#">5.0</a></li>
+                      <li><a href="#">5.5</a></li>
+                      <li><a href="#">6.0</a></li>
+                      <li><a href="#">6.5</a></li>
+                      <li><a href="#">7.0</a></li>
+                      <li><a href="#">7.5</a></li>
+                      <li><a href="#">8.0</a></li>
+                      <li><a href="#">8.5</a></li>
+                      <li><a href="#">9.0</a></li>
+                      <li><a href="#">9.5</a></li>
+                      <li><a href="#">10.0</a></li>
+                      <li><a href="#">10.5</a></li>
+                      <li><a href="#">11.0</a></li>
+                      <li><a href="#">12+</a></li>
+                    </ul>
+                  </div>
+                    <ul class="mega-links">
+                      <li><a href="#">Wide Width</a></li>
+                      <li><a href="#">Extra Wide Width</a></li>
+                    </ul>
+                  </div>
+                  <!-- 4th div -->
+                      <div class="row">
+                        <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/mens-tab/2023/spring/wk2_020823_site_ads_mega_nav_spg23_mens_nike.jpg" alt="">
+                        <header>SHOP MEN's NIKE</header>
+                      </div>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </li>
+  
+            <!-- brands -->
+  
+            <li>
+              <a href="#" class="desktop-item">Brands</a>
+              <!-- <input type="checkbox" id="showMega">
+              <label for="showMega" class="mobile-item">Brands</label> -->
+              <div class="mega-box">
+                <div class="content" id="content">
+                  <!-- 1st div -->
+                  <div class="row">
+                    <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/nike.svg" alt=""></a>
+                 
+                  </div>
+                  <!-- 2nd div -->
+                  <div class="row">
+                    <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/vans.svg" alt=""></a>
+                   
+                  </div>
+                  <!-- 3rd div -->
+                  <div class="row">
+                    <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/adidas_update.svg" alt=""></a>
+                  
+                  </div>
+                  <!-- 4th div -->
+                      <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/converse.svg" alt=""></a>                
+                      </div>
+                      <!-- 5th div -->
+                      <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/skechers.svg" alt=""></a>
+                        
+                      </div>
+                      <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/crocs.svg" alt=""></a>
+                       
+                      </div>
+                      <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/birkenstock.svg" alt=""></a>
+                       
+                      </div>
+                      <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/newbalance.svg" alt=""></a>
+                       
+                      </div>
+                      <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/puma.svg" alt=""></a>
+                       
+                      </div>
+                      <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/asics.svg" alt=""></a>
+                       
+                      </div>
+                      <!-- <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/dr-martens.svg" alt=""></a>
+                       
+                      </div> -->
+                      <!-- <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/drscholls.svg" alt=""></a>
+                       
+                      </div>
+                      <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/ryka.png" alt=""></a>                 
+                      </div>
+                      <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/naturalizer.svg" alt=""></a>
+                      </div>
+                      <div class="row">
+                        <a href=""><img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/brand-logos/lifestride_logo_meganav_2.svg" alt=""></a>
+                       
+                      </div> -->
+                  </div>
+                </div>
+            
+            </li>
+  
+            <!-- accesooroes -->
+  
+            <li>
+              <a href="#" class="desktop-item">Accessories</a>
+              <!-- <input type="checkbox" id="showMega">
+              <label for="showMega" class="mobile-item">Accessories</label> -->
+              <div class="mega-box">
+                <div class="content">
+                  <!-- 1st div -->
+                  <div class="row">
+                    <header>Accessories</header>
+                    <ul class="mega-links">
+                      <li><a href="#">View All</a></li>
+                      <li><a href="#">Socks</a></li>
+                      <li><a href="#">Bags</a></li>
+                      <li><a href="#">Lanyards</a></li>   
+                      <li><a href="">Shoe Charms</a></li>  
+                      <li><a href="">Water Bottels</a></li> 
+                      <li><a href="">Hair Accessories</a></li> 
+                      <li><a href="">Slippers</a></li> 
+                      <li><a href="">Pins</a></li> 
+                    </ul>
+                  </div>
+                  <!-- 2nd div -->
+                  <div class="row">
+                    <header>Bags</header>
+                    <ul class="mega-links">
+                      <li><a href="#">View All</a></li>
+                      <li><a href="#">Backpacks</a></li>
+                      <li><a href="#">Lunch Boxes and Bags</a></li>
+                      <li><a href="#">Drawstring Bags</a></li>
+                      <li><a href="#">Mini Bags</a></li>
+                      <li><a href="#">dress Shoes</a></li>
+                      <li><a href="#">Mary Janes</a></li>
+                      <li><a href="#">Fanny Packs</a></li>
+                    </ul>
+                  </div>
+                  <!-- 3rd div -->
+                 
+                  <div class="row">
+                    <header>Slippers</header>                
+                    <ul class="mega-links">
+                      <li><a href="#">All Slippers</a></li>
+                      <li><a href="#">Women</a></li>
+                      <li><a href="#">Men</a></li>
+                      <li><a href="#">Kids</a></li>
+                    </ul>
+                  
+                  </div>
+                  <!-- 4th div -->
+            <div class="row">
+              <header>Other Ways to Shop</header>
+              <ul class="mega-links">
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Back In Stock</a></li>
+                <li><a href="#">Eco-Conscious</a></li>
+              </ul>
+            </div>
+                  </div>
+                </div>
+            
+            </li>
+  
+          <!-- sale -->
+          <li>
+            <a href="#" class="desktop-item">Sale</a>
+            <!-- <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Sale</label> -->
+            <div class="mega-box">
+              <div class="content">
+                <!-- 1st div -->
+                <div class="row">
+                  <header>Sale</header>
+                  <ul class="mega-links">
+                    <li><a href="#">View All</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Girls</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Boys</a></li>
+                    <li><a href="#">Clearance</a></li>
+                  </ul>
+                </div>
+                <!-- 2nd div -->
+                <div class="row">
+                  <header>Shop By Brand</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Nike</a></li>
+                    <li><a href="#">Adidas</a></li>
+                    <li><a href="">Converse</a></li>
+                    <li><a href="">Vans</a></li>
+                    <li><a href="">Birkenstock</a></li>
+                    <li><a href="">Crocs</a></li>
+                    <li><a href="">Timberland</a></li>
+                    <li><a href="">Dr Martens</a></li>
+                  </ul>
+                  <header>Shop By Price Point</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Under $75</a></li>
+                    <li><a href="#">Under $50</a></li>
+                    <li><a href="#">Under $30</a></li>       
+                  </ul>
+                </div>
+                <!-- 3rd div -->     
+                    <div class="row">
+                      <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/sale/2023/spring/clearance/spg23_meganav_clearance.jpg" alt="">
+                      <header>SHOP CLEARANCE</header>
+                    </div>
+                </div>
+              </div>
+          
+          </li>
+  
+          <!-- Offers -->
+          <a href="#" class="desktop-item">Your Offers</a>
+        </ul>
+        </div>
+        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+      </div>
+    </nav> 
+    <hr/>
+
+
+
+
+    <!-- NAvbar above -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <main>
     <!-- <div class="nav">
       <a href="./signupPage.html">Signup</a>
@@ -434,8 +1441,14 @@ width: 120px;
         <label for="lemail">Email</label>
         <input type="email" id="email" placeholder="Enter @gmail.com" required />
         <label for="lpass">Password</label>
-        <input type="password" id="password"  placeholder="Enter Password" required/>
-        <p id="pmono"><a id="anker" href="#">Forgot Password!</a> </p>
+       
+        <input type="password" id="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" 
+        id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"   placeholder="Enter Password" required/>
+       
+        <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+        <p id="pmono"><a id="anker" href="forgotPass.html">Forgot Password!</a> </p>
+        <!-- <input type="checkbox" 
+           onclick="Toggle()"> -->
         <input id="subMit1" type="submit" value="Submit" />
         <h4> OR</h4>
       <ul class="helper-text">
@@ -452,6 +1465,29 @@ width: 120px;
 </main>
 
 <!-- footer start -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <footer>
   <div class="content">
     <div id="connect">
@@ -538,22 +1574,36 @@ width: 120px;
 <script> //checking
     var form = document.querySelector('form');
    var heading = document.querySelector('#heading');
+   var togglePassword = document.querySelector('#togglePassword');
+   var password = document.querySelector('#password');
+   togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    var type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    // this.classList.toggle('bi-eye');
+});
+
    
    form.addEventListener('submit', function(event) {
        event.preventDefault();
    
        var email = document.querySelector('#email').value;
        var password = document.querySelector('#password').value;
+       
    
        var accountData = JSON.parse(localStorage.getItem('account-data'));
-   
+        var str=localStorage.getItem("name1")
        if (accountData !== null) {
-           const matchingAccountData = accountData.find(account => account.email === email && account.password === password);
+           var matchingAccountData = accountData.find(account => account.email === email && account.password === password);
    
            if (matchingAccountData) {
               //  heading.textContent = 'Sign in Successful';
-         alert('Login successfully!');
-         signupPage.html
+              
+         alert('Welcome to famousfootrwear '+ str);
+        //  alert("Welcome" + account. +"to FamousFootwear");
+         window.location.href = "index.html"
+        
 
        } else {
           //  heading.textContent = 'Wrong Credentials';
@@ -561,10 +1611,11 @@ width: 120px;
        }
    
    }
+ 
    
    });
    
    
-   
+  
        </script>
        
