@@ -705,6 +705,15 @@ h3+hr {
     margin-right: 0px;
 }
 
+.logoutfunction{
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* color:rgb(213,0,50); */
+    margin-left: 5%;
+    /* text-decoration: none; */
+    text-underline-offset: 20px;
+    
+  }
 @media (max-width:1200px) {
     #videomash {
         margin-bottom: -5%;
