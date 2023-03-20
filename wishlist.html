@@ -218,6 +218,7 @@ nav input{
  border: 2px solid ;
  border-color: #333f48;
  color: #3A3B3C;
+ z-index: 100;
 }
 
  #inputtag{
@@ -475,14 +476,15 @@ margin-right: -30%;
             padding: 20px;
             margin:95px 75px;
         }
-        .add{
-            position: absolute;
+        /* .add{
+            /* position: absolute;
             left: 33%;
             top: 33%;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             width:400px;
             height:250px;
-        }
+            z-index: 100;
+        } */ 
         #main {
             margin: 0px 10%;
         }
@@ -1041,26 +1043,27 @@ margin-right: -30%;
 </html>
 <script>
     var whish=JSON.parse(localStorage.getItem("whishProducts"))||[];
-    if(whish.length==0)
-    {
-       var num=whish.length;
-       document.querySelector(".num").textContent="WishList Products - "+num;
+    // if(whish.length==0)
+    // {
+    //    var num=whish.length;
+    //    document.querySelector(".num").textContent="WishList Products - "+num;
 
-       var div=document.createElement("div");
-       div.setAttribute("class","add");
-
-
-        var btn=document.createElement("button");
-        btn.textContent="ADD PRODUCTS TO WHISHLIST";
-        btn.setAttribute("class","WLbutton");
+    //    var div=document.createElement("div");
+    //    div.setAttribute("class","add");
 
 
-        div.append(btn);
-        document.querySelector("body").append(div);
-    }
-    else{
+    //     var btn=document.createElement("button");
+    //     btn.textContent="ADD PRODUCTS TO WHISHLIST";
+    //     btn.setAttribute("class","WLbutton");
+        
+
+
+    //     div.append(btn);
+    //     document.querySelector("body").append(div);
+    // }
+    // else{
           displayWL(whish);
-    }
+    // }
 
 
     function displayWL(whish)
@@ -1072,7 +1075,7 @@ margin-right: -30%;
         }
         else
         {
-            whish.map(function(elem)
+        whish.map(function(elem)
          {
             var mast=document.createElement("div");
             mast.setAttribute("class","mast");
