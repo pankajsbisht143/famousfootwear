@@ -9,6 +9,14 @@
 
 
     <style>
+      /* .logoutfunction{
+  font-size: 18px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* color:rgb(213,0,50); */
+  margin-left: 5%;
+  /* text-decoration: none; */
+  text-underline-offset: 20px;
+} */
         a {
     text-decoration: none;
     color: black;
@@ -1914,32 +1922,38 @@ function caltotal(){
             document.getElementById("pr").textContent = t - change;
         }
     }
-    const username=localStorage.getItem("name1");
-  const usernamedisplay=document.getElementById("wxs");
-  console.log(username);
-  if(username){
-   var logout= document.createElement("span");
-   logout.setAttribute("class","logoutfunction");
-   logout.textContent=" Log Out";
-   document.getElementById("usernamedisplay").append(logout)
-   usernamedisplay.textContent=username;
-    console.log(username);
-    usernamedisplay.style.color="rgb(213,0,50)";
-    usernamedisplay.style.fontSize="17px";
-    // usernamedisplay.style.fontWeight="bold";
-    usernamedisplay.style.fontFamily="Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
-    usernamedisplay.style.textDecoration="none"
-    // log out function
-    // document.querySelector(".logoutfunction").addEventListener("click","gologout");
-    logout.addEventListener("click",gologout)
-    function gologout()
-    {
-      document.getElementById("usernamedispay").textContent="Sign In/Join now"
-      window.location.href="./signIn.html"
+    var username=localStorage.getItem("name1");
+    if(username){
+    document.getElementById("wxs").textContent=username;
+    }else{
+      document.getElementById("wxs").textContent="Sign In/Join now";
     }
-  }
-  else{
-    usernamedisplay.textContent="Sign In/Join now"
-  }
+  //   const username=localStorage.getItem("name1");
+  // const usernamedisplay=document.getElementById("wxs");
+  // console.log(username);
+  // if(username){
+  // //  var logout= document.createElement("span");
+  // //  logout.setAttribute("class","logoutfunction");
+  // //  logout.textContent=" Log Out";
+  // //  document.getElementById("usernamedisplay").append(logout)
+  //  usernamedisplay.textContent=username;
+  //   console.log(username);
+  //   usernamedisplay.style.color="rgb(213,0,50)";
+  //   usernamedisplay.style.fontSize="17px";
+  //   // usernamedisplay.style.fontWeight="bold";
+  //   usernamedisplay.style.fontFamily="Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
+  //   usernamedisplay.style.textDecoration="none"
+  //   // log out function
+  //   // document.querySelector(".logoutfunction").addEventListener("click","gologout");
+  // //   logout.addEventListener("click",gologout)
+  // //   function gologout()
+  // //   {
+  // //     document.getElementById("usernamedispay").textContent="Sign In/Join now"
+  // //     window.location.href="./signIn.html"
+  // //   }
+  // // }
+  // // else{
+  // //   usernamedisplay.textContent="Sign In/Join now"
+  // // }
 </script>
 
