@@ -24,8 +24,9 @@
 }
 .parent >h2 {
     text-align: center;
-    color:white;
+    color:rgb(37, 147, 155);
     font-weight: bold;
+    margin-top: 5px;
     
 }
 #link {
@@ -43,6 +44,7 @@
   height: 30px;
   background-color: rgb(51,63,72);;
   color: #f2f2f5;
+  border-radius: 5px;
 }
 .parent>p{
   text-align: center;
@@ -76,6 +78,7 @@
   </body>
 </html>
 <script>
+  var kite=localStorage.getItem("name1");
   var pre=localStorage.getItem("cartper");
   var tree=localStorage.getItem("cartp");
   
@@ -85,11 +88,14 @@
     var pa=document.createElement("p");
     pa.textContent="Total price:-$"+tree;
 
+    var na=document.createElement("p");
+    na.textContent="Name:"+kite;
+
     var img=document.createElement("img");
        img.setAttribute("src","https://d1csarkz8obe9u.cloudfront.net/posterpreviews/thank-you-for-shopping-with-us-flyer-design-template-f5c4c2e4ab93f102c46becd8feb1c5b3.jpg?ts=1618347130");
        img.setAttribute("id","carry");
 
-    document.querySelector("#yui").append(p,pa,img);
+    document.querySelector("#yui").append(p,pa,na,img);
 
   
 </script>
